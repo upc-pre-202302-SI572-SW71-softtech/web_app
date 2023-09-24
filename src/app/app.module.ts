@@ -13,6 +13,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import { DevicesIotComponent } from './iot-managament/devices-iot/devices-iot.component';
+import { TravelDescriptionComponent } from './experience-design/travel-description/travel-description.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { DevicesIotComponent } from './iot-managament/devices-iot/devices-iot.co
     HeaderComponent,
     TravelsComponent,
     AgenciesComponent,
-    DevicesIotComponent
+    DevicesIotComponent,
+    TravelDescriptionComponent
   ],
   imports: [
     BrowserModule,
