@@ -12,6 +12,7 @@ import { AgenciesComponent } from './experience-design/agencies/agencies.compone
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
+import { DevicesIotComponent } from './iot-managament/devices-iot/devices-iot.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {MatMenuModule} from '@angular/material/menu';
     AppComponent,
     HeaderComponent,
     TravelsComponent,
-    AgenciesComponent
+    AgenciesComponent,
+    DevicesIotComponent
   ],
   imports: [
     BrowserModule,
