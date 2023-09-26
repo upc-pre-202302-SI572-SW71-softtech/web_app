@@ -5,12 +5,12 @@
         </div>
         <div class="list-card">
 
-            <div class="card">
-                <img class="imagen-card" src="../../../assets/images/logo-agency.png" alt="">
+            <div class="card" *ngFor="let agency of agencies; let i = index">
+                <img class="imagen-card" [src]="agency.logo" alt="">
                 <div class="descripcion">
                     <div class="encabezado">
                         <div class="nombre">
-                            travelnew
+                            {{agency.nombre}}
                         </div>
                         <div class="estrellas">
                             <mat-icon class="estrella">star</mat-icon>
@@ -22,109 +22,31 @@
                     </div>
 
                     <div class="correo">
-                        travelnew@gmail.com
+                        {{agency.correo}}
                     </div>
                     <div class="descripcion-agency">
-                        Somos una agencia destinada al alpinismo para principiantes y personas experimentadas. Contamos
-                        con más de 20 años de experiencia en el rubro de alpinismo. Agradecemos tu visita.
+                        {{agency.descripcion}}
                     </div>
                     <div class="datos">
                         <div class="item">
                             <div class="negrita">Ubicacion</div>
-                            <p>Maicena, Lima - Peru</p>
+                            <p>{{agency.ubicacion}}</p>
                         </div>
                         <div class="item">
                             <div class="negrita">RUC</div>
-                            <p>102837465</p>
+                            <p>{{agency.ruc}}</p>
                         </div>
                         <div class="item">
                             <div class="negrita">Telefono</div>
-                            <p>192837465</p>
+                            <p>{{agency.telefono}}</p>
                         </div>
                     </div>
                 </div>
-
-            </div>
-            <div class="card">
-                <img class="imagen-card" src="../../../assets/images/logo-agency.png" alt="">
-                <div class="descripcion">
-                    <div class="encabezado">
-                        <div class="nombre">
-                            travelnew
-                        </div>
-                        <div class="estrellas">
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                        </div>
-                    </div>
-
-                    <div class="correo">
-                        travelnew@gmail.com
-                    </div>
-                    <div class="descripcion-agency">
-                        Somos una agencia destinada al alpinismo para principiantes y personas experimentadas. Contamos
-                        con más de 20 años de experiencia en el rubro de alpinismo. Agradecemos tu visita.
-                    </div>
-                    <div class="datos">
-                        <div class="item">
-                            <div class="negrita">Ubicacion</div>
-                            <p>Maicena, Lima - Peru</p>
-                        </div>
-                        <div class="item">
-                            <div class="negrita">RUC</div>
-                            <p>102837465</p>
-                        </div>
-                        <div class="item">
-                            <div class="negrita">Telefono</div>
-                            <p>192837465</p>
-                        </div>
-                    </div>
+                <div class="boton-viajes" (click)="search(agency.nombre)">
+                    ver viajes
                 </div>
-
             </div>
-            <div class="card">
-                <img class="imagen-card" src="../../../assets/images/logo-agency.png" alt="">
-                <div class="descripcion">
-                    <div class="encabezado">
-                        <div class="nombre">
-                            travelnew
-                        </div>
-                        <div class="estrellas">
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                        </div>
-                    </div>
 
-                    <div class="correo">
-                        travelnew@gmail.com
-                    </div>
-                    <div class="descripcion-agency">
-                        Somos una agencia destinada al alpinismo para principiantes y personas experimentadas. Contamos
-                        con más de 20 años de experiencia en el rubro de alpinismo. Agradecemos tu visita.
-                    </div>
-                    <div class="datos">
-                        <div class="item">
-                            <div class="negrita">Ubicacion</div>
-                            <p>Maicena, Lima - Peru</p>
-                        </div>
-                        <div class="item">
-                            <div class="negrita">RUC</div>
-                            <p>102837465</p>
-                        </div>
-                        <div class="item">
-                            <div class="negrita">Telefono</div>
-                            <p>192837465</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
 
         </div>
     </div>

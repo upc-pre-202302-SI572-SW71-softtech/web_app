@@ -1,9 +1,11 @@
-import { Activity } from "./activitie";
+import { Activity } from "./activity";
 
 export interface Travel{
     titulo: string;
     descripcion: string;
     logo: string;
+    nombreAgencia: string;
+    lugar: string;
     correo: string;
     telefono: number;
     fechaRegistro: string;

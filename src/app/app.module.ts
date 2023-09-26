@@ -15,6 +15,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { DevicesIotComponent } from './iot-managament/devices-iot/devices-iot.component';
 import { TravelDescriptionComponent } from './experience-design/travel-description/travel-description.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from './experience-design/search/search.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { TravelDescriptionComponent } from './experience-design/travel-descripti
     TravelsComponent,
     AgenciesComponent,
     DevicesIotComponent,
-    TravelDescriptionComponent
+    TravelDescriptionComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { TravelDescriptionComponent } from './experience-design/travel-descripti
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

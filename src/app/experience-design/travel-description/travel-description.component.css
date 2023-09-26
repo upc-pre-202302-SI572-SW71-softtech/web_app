@@ -32,8 +32,14 @@ body{
     padding-top: 1rem;
 }
 
+.point_container{
+    align-items: center;
+    text-align: center;
+}
+
 .point{
     color: #338DD6;
+    margin-left: 30%;
 }
 
 .estrellas{
@@ -144,6 +150,7 @@ body{
     width: 80%;
     display: block;
     margin-right: auto;
+    border-radius: 100%;
 }
 
 .ofrecido{
