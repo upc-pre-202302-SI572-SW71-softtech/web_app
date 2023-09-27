@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TravelService } from '../travels/travel.service';
 import { Router } from '@angular/router';
+import { Agency } from 'src/app/models/agency';
+import { AgencyService } from '../agencies/agency.service';
 
 @Component({
   selector: 'app-search',
@@ -11,24 +13,25 @@ export class SearchComponent implements OnInit{
   travels: any[] = []; // Arreglo para almacenar los datos de viaje
   travelsAux: any[]=[];
   descriptions: any[] =[]
-  nombreAgency: any = ""
-  constructor(private travelService: TravelService, private router: Router) {
+  agency: any = {}; 
+  agencyId: any = ""
+  constructor(private travelService: TravelService, private router: Router, private agencyService: AgencyService) {
     
   }
 
   ngOnInit() {
     this.getTravels();
+    this.getAgencies()
   }
 
   getTravels() {
-    this.travelService.getTravels().subscribe(
+    let indice: string|any = localStorage.getItem("name-agency")
+    this.agencyId = parseInt(indice)
+    this.travelService.getTravelsByAgencyId(this.agencyId).subscribe(
       (travels) => {
-        this.nombreAgency = localStorage.getItem("name-agency")
-        this.travels = travels;
-        this.travelsAux = travels;
-        this.searchName()
-        this.reduceCaracter();
         
+        this.travels = travels;
+        this.reduceCaracter();
       },
       (error) => {
         console.error('Error al obtener los viajes:', error);
@@ -36,20 +39,18 @@ export class SearchComponent implements OnInit{
     );
   }
 
-  searchName(){
-    for(let i=0; i<this.travels.length;i++){
-      if(this.travels[i].nombreAgencia==this.nombreAgency){
-        
+
+  getAgencies() {
+    this.agencyService.getAgencies().subscribe(
+      (agencies) => {
+        this.agency = agencies[this.agencyId-1];
+      },
+      (error) => {
+        console.error('Error al obtener las agencias:', error);
       }
-      else{
-        // console.log("eliminado: " + travel.nombreAgencia)
-        // if(i>0)this.travels.splice(i-1,1)
-        // else this.travels.splice(i,1)
-        this.travels.splice(i,1)
-        i--
-      }
-    }
+    );
   }
+
 
   reduceCaracter() {
 
@@ -81,19 +82,10 @@ export class SearchComponent implements OnInit{
     return false;
   }
 
-  seeDetails(titulo:any){
-    console.log("titulo: "+titulo)
-    let indice: number = -1
-    console.log("arreglo travelaux: ")
-    console.log(this.travelsAux)
-    for(let i=0;i<this.travelsAux.length;i++){
-      if(this.travelsAux[i].titulo===titulo){
-        indice=i
-      }
-    }
-    console.log("titulo indice: " + this.travelsAux[indice].titulo)
+  seeDetails(id:any){
+    
     localStorage.removeItem("indice-travel")
-        localStorage.setItem("indice-travel",indice.toString())
+        localStorage.setItem("indice-travel",id.toString())
         this.router.navigate(["/travel-description"])
   }
 

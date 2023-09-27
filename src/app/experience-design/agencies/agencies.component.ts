@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./agencies.component.css']
 })
 export class AgenciesComponent implements OnInit {
-  agencies: Agency[] = [];
+  agencies: Agency[] = []; 
 
   constructor(private agencyService: AgencyService, private router: Router) { }
 
@@ -27,8 +27,8 @@ export class AgenciesComponent implements OnInit {
     );
   }
 
-  search(name: any) {
-    localStorage.setItem("name-agency", name)
+  search(id: any) {
+    localStorage.setItem("name-agency", id)
     this.router.navigate(["/search-travels"])
   }
 

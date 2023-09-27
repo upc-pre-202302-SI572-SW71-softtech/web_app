@@ -1,4 +1,5 @@
 export interface Agency{
+    id: number;
     nombre: string;
     logo: string;
     correo: string;

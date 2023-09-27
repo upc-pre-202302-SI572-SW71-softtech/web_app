@@ -223,57 +223,5 @@
         }
       ]
     }
-  ],
-  "agencies": [
-    {
-      "id": 1,
-      "nombre": "Aventuras Extremas",
-      "logo": "https://img.freepik.com/vector-premium/icono-camping-montana-turismo-escalada-roca_8071-8074.jpg?w=2000",
-      "correo": "info@aventurasextremas.com",
-      "descripcion": "Somos una agencia de aventuras extremas en la montaña.",
-      "ubicacion": "Quito, Pichincha, Ecuador",
-      "ruc": 1234567890,
-      "telefono": 123456789
-    },
-    {
-      "id": 2,
-      "nombre": "Patagonia Adventure",
-      "logo": "https://img.freepik.com/vector-premium/montana-viaje-hombre-retro-emblema-aventura-extrema-escalada-al-aire-libre-turismo-logo-vector_396343-258.jpg?w=2000",
-      "correo": "info@patagoniaadventure.com",
-      "descripcion": "Explora la belleza de la Patagonia con nosotros.",
-      "ubicacion": "El Calafate, Santa Cruz, Argentina",
-      "ruc": 9876543210,
-      "telefono": 987654321
-    },
-    {
-      "id": 3,
-      "nombre": "Bolivia Trek",
-      "logo": "https://previews.123rf.com/images/topvectors/topvectors1705/topvectors170500856/78279945-logotipo-de-resort-de-centro-de-escalada-de-monta%C3%B1a-senderismo-de-monta%C3%B1a-etiquetas-de-exploraci%C3%B3n.jpg",
-      "correo": "info@boliviatrek.com",
-      "descripcion": "Descubre los mejores treks en Bolivia.",
-      "ubicacion": "La Paz, La Paz, Bolivia",
-      "ruc": 5678901234,
-      "telefono": 567890123
-    },
-    {
-      "id": 4,
-      "nombre": "ExploraNaturaleza",
-      "logo": "https://png.pngtree.com/png-vector/20191201/ourlarge/pngtree-rock-climbing-logo-design-vector-png-image_2066826.jpg",
-      "correo": "info@exploranaturaleza.com",
-      "descripcion": "Tu socio en aventuras al aire libre.",
-      "ubicacion": "Santiago, Región Metropolitana, Chile",
-      "ruc": 3456789012,
-      "telefono": 345678901
-    },
-    {
-      "id": 5,
-      "nombre": "Ecuador Trekking",
-      "logo": "https://png.pngtree.com/png-clipart/20200721/original/pngtree-mountain-travel-man-retro-emblem-extreme-adventure-climbing-outdoor-tourism-logo-png-image_4868334.jpg",
-      "correo": "info@ecuadortrekking.com",
-      "descripcion": "Llevamos el trekking a otro nivel en Ecuador.",
-      "ubicacion": "Cuenca, Azuay, Ecuador",
-      "ruc": 7890123456,
-      "telefono": 789012345
-    }
   ]
 }

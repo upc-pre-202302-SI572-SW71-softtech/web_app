@@ -1,10 +1,11 @@
 import { Activity } from "./activity";
 
 export interface Travel{
+    id: number;
     titulo: string;
     descripcion: string;
     logo: string;
-    nombreAgencia: string;
+    agencyId: number;
     lugar: string;
     correo: string;
     telefono: number;

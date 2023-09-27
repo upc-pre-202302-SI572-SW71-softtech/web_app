@@ -16,6 +16,12 @@ export class TravelService {
     return this.http.get<any[]>(this.apiUrl);
   }
 
+  // Obtener viajes por ID de agencia
+  getTravelsByAgencyId(agencyId: number): Observable<any[]> {
+    const url = `${this.apiUrl}?agencyId=${agencyId}`;
+    return this.http.get<any[]>(url);
+  }
+
   // Obtener un viaje por ID
   getTravelById(id: number): Observable<any> {
     const url = `${this.apiUrl}/${id}`;
