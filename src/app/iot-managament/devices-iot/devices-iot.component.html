@@ -4,106 +4,35 @@
             Lista de Agencias
         </div>
         <div class="list-card">
-
-            <div class="card">
-                <img class="imagen-card" src="../../../assets/images/smartphone.png" alt="">
+            <div class="card" *ngFor="let card of cards">
+                <img class="imagen-card" [src]="card.imageUrl" alt="Card Image">
                 <div class="descripcion">
                     <div class="encabezado">
                         <div class="nombre">
-                            App Mobile
+                            {{ card.name }}
                         </div>
                         <div class="estrellas">
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
+                            <ng-container *ngFor="let i of [].constructor(card.starRating)">
+                                <mat-icon class="estrella">star</mat-icon>
+                            </ng-container>
                         </div>
                     </div>
                     
                     <div class="descripcion-agency">
-                        Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de 
+                        {{ card.description }}
                     </div>
                     <div class="datos">
                         <div class="item">
                             <div class="negrita">Price</div>
-                            <p>$ 300.00</p>
+                            <p>$ {{ card.price }}</p>
                         </div>
                         <div class="item">
                             <div class="negrita">Marca</div>
-                            <p>Apple /  Huawei / Xiaomi</p>
+                            <p>{{ card.marca }}</p>
                         </div>
                     </div>
                 </div>
-
             </div>
-
-            <div class="card">
-                <img class="imagen-card" src="../../../assets/images/sensor.png" alt="">
-                <div class="descripcion">
-                    <div class="encabezado">
-                        <div class="nombre">
-                            Sensors
-                        </div>
-                        <div class="estrellas">
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                        </div>
-                    </div>
-                    
-                    <div class="descripcion-agency">
-                        Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de 
-                    </div>
-                    <div class="datos">
-                        <div class="item">
-                            <div class="negrita">Price</div>
-                            <p>$ 100.00</p>
-                        </div>
-                        <div class="item">
-                            <div class="negrita">Marca</div>
-                            <p>Apple /  Huawei / Xiaomi</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="card">
-                <img class="imagen-card" src="../../../assets/images/smartwatch.png" alt="">
-                <div class="descripcion">
-                    <div class="encabezado">
-                        <div class="nombre">
-                            SmartWatch
-                        </div>
-                        <div class="estrellas">
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                            <mat-icon class="estrella">star</mat-icon>
-                        </div>
-                    </div>
-                    
-                    <div class="descripcion-agency">
-                        Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de 
-                    </div>
-                    <div class="datos">
-                        <div class="item">
-                            <div class="negrita">Price</div>
-                            <p>$ 100.00</p>
-                        </div>
-                        <div class="item">
-                            <div class="negrita">Marca</div>
-                            <p>Apple /  Huawei / Xiaomi</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
         </div>
     </div>
 </body>

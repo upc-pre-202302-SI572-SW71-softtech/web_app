@@ -25,6 +25,7 @@ export class TravelsComponent implements OnInit {
     this.travelService.getTravels().subscribe(
       (travels) => {
         this.travels = travels;
+        console.log(this.travels)
         this.reduceCaracter();
       },
       (error) => {
@@ -52,9 +53,6 @@ export class TravelsComponent implements OnInit {
       }
       this.descriptions[i] = aux + "..."
     }
-
-    console.log("Descripciones: ")
-    console.log(this.descriptions)
   }
 
   condition(e: number, texto: string) {
@@ -64,7 +62,6 @@ export class TravelsComponent implements OnInit {
   }
 
   seeDetails(i:any){
-    console.log("indice: " + i)
     localStorage.removeItem("indice-travel")
     localStorage.setItem("indice-travel",i)
     this.router.navigate(["/travel-description"])

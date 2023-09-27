@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class TravelService {
 
-  private apiUrl = 'http://localhost:3000/travels';
+  private apiUrl = 'https://my-json-server.typicode.com/QuispeJerry/data/travels';
 
   constructor(private http: HttpClient) {}
 
@@ -20,28 +20,5 @@ export class TravelService {
   getTravelsByAgencyId(agencyId: number): Observable<any[]> {
     const url = `${this.apiUrl}?agencyId=${agencyId}`;
     return this.http.get<any[]>(url);
-  }
-
-  // Obtener un viaje por ID
-  getTravelById(id: number): Observable<any> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.get<any>(url);
-  }
-
-  // Agregar un nuevo viaje
-  addTravel(travel: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, travel);
-  }
-
-  // Actualizar un viaje existente
-  updateTravel(id: number, travel: any): Observable<any> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.put<any>(url, travel);
-  }
-
-  // Eliminar un viaje
-  deleteTravel(id: number): Observable<any> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.delete<any>(url);
   }
 }

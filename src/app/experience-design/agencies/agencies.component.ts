@@ -20,6 +20,7 @@ export class AgenciesComponent implements OnInit {
     this.agencyService.getAgencies().subscribe(
       (agencies) => {
         this.agencies = agencies;
+        console.log(this.agencies)
       },
       (error) => {
         console.error('Error al obtener las agencias:', error);
