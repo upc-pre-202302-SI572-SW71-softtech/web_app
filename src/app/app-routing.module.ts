@@ -5,6 +5,8 @@ import { TravelsComponent } from './experience-design/travels/travels.component'
 import { DevicesIotComponent } from './iot-managament/devices-iot/devices-iot.component';
 import { TravelDescriptionComponent } from './experience-design/travel-description/travel-description.component';
 import { SearchComponent } from './experience-design/search/search.component';
+import { CreateTravelComponent } from './experience-design/create-travel/create-travel.component';
+import { ProfileAgencyComponent } from './account-agency/profile-agency/profile-agency.component';
 
 const routes: Routes = [
   {path: 'list-agencies', component:AgenciesComponent},
@@ -12,6 +14,8 @@ const routes: Routes = [
   {path: 'list-devices-iot', component:DevicesIotComponent},
   {path: 'travel-description', component:TravelDescriptionComponent},
   {path: 'search-travels', component:SearchComponent},
+  {path: 'create-travels', component:CreateTravelComponent},
+  {path: 'profile-agency', component:ProfileAgencyComponent},
   {path: '**', redirectTo: 'list-agencies', pathMatch: 'full'},
 ];
 

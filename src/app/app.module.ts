@@ -17,6 +17,10 @@ import { TravelDescriptionComponent } from './experience-design/travel-descripti
 
 import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './experience-design/search/search.component';
+import {MatInputModule} from '@angular/material/input';
+import { CreateTravelComponent } from './experience-design/create-travel/create-travel.component';
+import { ProfileAgencyComponent } from './account-agency/profile-agency/profile-agency.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +30,9 @@ import { SearchComponent } from './experience-design/search/search.component';
     AgenciesComponent,
     DevicesIotComponent,
     TravelDescriptionComponent,
-    SearchComponent
+    SearchComponent,
+    CreateTravelComponent,
+    ProfileAgencyComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,8 @@ import { SearchComponent } from './experience-design/search/search.component';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
