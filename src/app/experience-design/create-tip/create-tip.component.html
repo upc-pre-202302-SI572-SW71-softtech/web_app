@@ -3,13 +3,13 @@
     <div class="inputs_">
 
     <mat-form-field class="example-full-width">
-        <mat-label>Descripción</mat-label>
-        <textarea matInput maxlength="1000"></textarea>
+        <mat-label>Descripción del tip</mat-label>
+        <textarea matInput [(ngModel)]="descripcionDeLaActividad" maxlength="1000"></textarea>
     </mat-form-field>
     </div>
 
     <div class="center">
-        <button mat-raised-button color="primary" style="background-color: #ace9fd; color: #000000" >Guardar tip</button>
+        <button mat-raised-button color="primary" style="background-color: #ace9fd; color: #000000" (click)="guardarTip()">Guardar tip</button>
     </div>
     
 </body>

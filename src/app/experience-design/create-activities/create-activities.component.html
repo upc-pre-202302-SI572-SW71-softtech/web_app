@@ -1,25 +1,20 @@
 <body>
-    <!-- <div class="titulo center">
-        Nueva actividad
-    </div> -->
-
     <div class="inputs_">
 
-        <!-- Nombre del viaje -->
-    <mat-form-field class="example-full-width">
-        <mat-label>Nombre de la actividad</mat-label>
-        <input matInput maxlength="75" required>
-    </mat-form-field>
+        <!-- Nombre de la actividad -->
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre de la actividad</mat-label>
+            <input matInput [(ngModel)]="nombreDeLaActividad" maxlength="75" required>
+        </mat-form-field>
 
-    <!-- Descripción del viaje -->
-    <mat-form-field class="example-full-width">
-        <mat-label>Descripción</mat-label>
-        <textarea matInput maxlength="1000"></textarea>
-    </mat-form-field>
+        <!-- Descripción de la actividad -->
+        <mat-form-field class="example-full-width">
+            <mat-label>Descripción</mat-label>
+            <textarea matInput [(ngModel)]="descripcionDeLaActividad" maxlength="1000"></textarea>
+        </mat-form-field>
     </div>
 
     <div class="center">
-        <button mat-raised-button color="primary" style="background-color: #ace9fd; color: #000000" >Guardar actividad</button>
+        <button mat-raised-button color="primary" style="background-color: #ace9fd; color: #000000" (click)="guardarActividad()">Guardar actividad</button>
     </div>
-    
 </body>

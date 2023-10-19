@@ -25,6 +25,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { CreateActivitiesComponent } from './experience-design/create-activities/create-activities.component';
 import { CreateTipComponent } from './experience-design/create-tip/create-tip.component';
 
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { CreateTipComponent } from './experience-design/create-tip/create-tip.co
     MatMenuModule,
     HttpClientModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
