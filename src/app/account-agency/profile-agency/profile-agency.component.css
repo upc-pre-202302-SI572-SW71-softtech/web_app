@@ -183,7 +183,7 @@ body{
 
 .card-travel {
     width: 15rem;
-    height: 18rem;
+    height: 22rem;
     border-radius: 20px;
     padding: 2rem;
     text-align: center;
@@ -248,4 +248,16 @@ body{
     display: grid;
     grid-template-columns: 85% 15%;
     justify-content: right;
+}
+
+.btnNuevoViaje{
+    background-color: #ace9fd;
+    color: #000000;
+    font-size: 14px;
+}
+
+.delete{
+    margin-top: 0.5rem;
+    margin-right: auto;
+    margin-left: auto;
 }

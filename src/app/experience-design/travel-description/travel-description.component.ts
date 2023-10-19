@@ -18,7 +18,8 @@ export class TravelDescriptionComponent implements OnInit {
   agency: any = {};
   
   constructor(private travelService: TravelService, private agencyService: AgencyService,
-    public dialog: MatDialog,public dialog2: MatDialog) {
+    public dialog: MatDialog,
+    public dialog2: MatDialog) {
 
   }
   ngOnInit(): void {
