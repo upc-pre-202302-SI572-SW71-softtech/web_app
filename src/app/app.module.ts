@@ -21,6 +21,10 @@ import {MatInputModule} from '@angular/material/input';
 import { CreateTravelComponent } from './experience-design/create-travel/create-travel.component';
 import { ProfileAgencyComponent } from './account-agency/profile-agency/profile-agency.component';
 
+import {MatDialogModule} from '@angular/material/dialog';
+import { CreateActivitiesComponent } from './experience-design/create-activities/create-activities.component';
+import { CreateTipComponent } from './experience-design/create-tip/create-tip.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +36,9 @@ import { ProfileAgencyComponent } from './account-agency/profile-agency/profile-
     TravelDescriptionComponent,
     SearchComponent,
     CreateTravelComponent,
-    ProfileAgencyComponent
+    ProfileAgencyComponent,
+    CreateActivitiesComponent,
+    CreateTipComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,8 @@ import { ProfileAgencyComponent } from './account-agency/profile-agency/profile-
     MatButtonModule,
     MatMenuModule,
     HttpClientModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
