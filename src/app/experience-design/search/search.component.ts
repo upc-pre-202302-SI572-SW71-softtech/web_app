@@ -16,30 +16,13 @@ export class SearchComponent implements OnInit{
   agency: any = {}; 
   agencyId: any = ""
   constructor(private travelService: TravelService, private router: Router, private agencyService: AgencyService) {
-    
   }
 
   ngOnInit() {
-    this.getTravels();
     this.getAgencies()
   }
 
-  getTravels() {
-    let indice: string|any = localStorage.getItem("name-agency")
-    this.agencyId = parseInt(indice)
-    this.travelService.getTravelsByAgencyId(this.agencyId).subscribe(
-      (travels) => {
-        
-        this.travels = travels;
-        this.reduceCaracter();
-      },
-      (error) => {
-        console.error('Error al obtener los viajes:', error);
-      }
-    );
-  }
-
-
+  
   getAgencies() {
     this.agencyService.getAgencies().subscribe(
       (agencies) => {
@@ -55,7 +38,7 @@ export class SearchComponent implements OnInit{
   reduceCaracter() {
 
     for(let i=0;i<this.travels.length; i++){
-      this.descriptions.push(this.travels[i].descripcion)
+      this.descriptions.push(this.travels[i].description)
     }
 
     // console.log("Descripciones: ")

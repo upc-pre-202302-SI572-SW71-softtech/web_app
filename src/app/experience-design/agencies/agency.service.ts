@@ -8,12 +8,16 @@ import { Agency } from 'src/app/models/agency';
 })
 export class AgencyService {
   
-  private apiUrl = 'https://my-json-server.typicode.com/QuispeJerry/data/agencies';
+  private apiUrl = 'http://localhost:8105/api/agencies';
 
   constructor(private http: HttpClient) { }
 
   // Obtener todas las agencias
   getAgencies(): Observable<Agency[]> {
     return this.http.get<Agency[]>(this.apiUrl);
+  }
+
+  getByid(id: any): Observable<Agency> {
+    return this.http.get<Agency>(`${this.apiUrl}/${id}`);
   }
 }

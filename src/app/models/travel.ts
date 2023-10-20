@@ -1,20 +1,23 @@
 import { Activity } from "./activity";
+import { Agency } from "./agency";
+import { Tip } from "./tip";
 
-export interface Travel{
-    id: number;
-    titulo: string;
-    descripcion: string;
-    logo: string;
-    agencyId: number;
-    lugar: string;
-    correo: string;
-    telefono: number;
-    fechaRegistro: string;
-    precio: number;
+export interface Travel {
+    id?: number;
+    name: string;
+    photoLogo: string;
+    description: string;
+    stars: number;
+    price: number;
+    location: string; 
+    photoPortada: string;
     photo1: string;
     photo2: string;
     photo3: string;
     photo4: string;
-    photo5: string;
-    activities: Activity[];
-}
+    createdDate: Date;
+    agency: Agency;
+    activities?: Activity[];
+    tips?: Tip[];
+  }
+  

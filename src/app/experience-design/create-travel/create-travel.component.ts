@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Travel } from 'src/app/models/travel';
+import { TravelService } from '../travels/travel.service';
+import { Agency } from '../../models/agency';
+import { Route, Router } from '@angular/router';
+import { MatDialogRef } from '@angular/material/dialog';
 
 
 @Component({
@@ -21,23 +26,38 @@ export class CreateTravelComponent {
   foto4: string = '';
   fechaDeCreacion: Date = new Date();
 
+  constructor(private serviceTravel: TravelService,
+    public dialogRef: MatDialogRef<CreateTravelComponent>) { }
+
   guardarViaje() {
-    const datos = {
-      nombreDelViaje: this.nombreDelViaje,
-      logoDelViaje: this.logoDelViaje,
-      descripcion: this.descripcion,
-      estrellas: this.estrellas,
-      precio: this.precio,
-      ubicacion: this.ubicacion,
-      fotoDePortada: this.fotoDePortada,
-      foto1: this.foto1,
-      foto2: this.foto2,
-      foto3: this.foto3,
-      foto4: this.foto4,
-      fechaDeCreacion: this.fechaDeCreacion,
+    const agency: Agency = {
+      id: 1,
+    };
+    const datos: Travel = {
+      name: this.nombreDelViaje,
+      photoLogo: this.logoDelViaje,
+      description: this.descripcion,
+      stars: this.estrellas,
+      price: this.precio,
+      location: this.ubicacion,
+      photoPortada: this.fotoDePortada,
+      photo1: this.foto1,
+      photo2: this.foto2,
+      photo3: this.foto3,
+      photo4: this.foto4,
+      createdDate: this.fechaDeCreacion,
+      agency: agency,
     };
 
     console.log(datos);
+    this.serviceTravel.postCreateTravel(datos).subscribe(
+      (data) => {
+        console.log(data);
+        this.dialogRef.close();
+      },
+      (error) => console.log(error)
+    );
+
   }
   
 }

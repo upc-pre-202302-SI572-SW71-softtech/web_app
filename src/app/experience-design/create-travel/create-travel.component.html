@@ -22,7 +22,7 @@
         <!-- Descripción del viaje -->
         <mat-form-field class="example-full-width">
             <mat-label>Descripción</mat-label>
-            <textarea matInput [(ngModel)]="descripcion" maxlength="1000"></textarea>
+            <textarea matInput [(ngModel)]="descripcion" maxlength="1000" required></textarea>
         </mat-form-field>
 
         <div class=""></div>
@@ -30,13 +30,13 @@
         <!-- Estrellas -->
         <mat-form-field class="example-full-width">
             <mat-label>Estrellas</mat-label>
-            <input matInput [(ngModel)]="estrellas" type="number">
+            <input matInput [(ngModel)]="estrellas" type="number" required>
         </mat-form-field>
 
         <!-- Precio -->
         <mat-form-field class="example-full-width">
             <mat-label>Precio</mat-label>
-            <input matInput [(ngModel)]="precio" type="number">
+            <input matInput [(ngModel)]="precio" type="number" required>
         </mat-form-field>
 
         <div class=""></div>
@@ -83,7 +83,7 @@
         <!-- Fecha de creación -->
         <mat-form-field class="example-full-width">
             <mat-label>Fecha de creación</mat-label>
-            <input matInput [(ngModel)]="fechaDeCreacion" type="date">
+            <input matInput [(ngModel)]="fechaDeCreacion" type="date" required>
         </mat-form-field>
 
     </div>

@@ -5,7 +5,7 @@
             <div class="card">
                 <div class="encabezado">
                     <div class="nombre">
-                        {{agency.nombre}}
+                        {{agency.name}}
                     </div>
                     <div class="estrellas">
                         <!-- <mat-icon class="estrella">star</mat-icon>
@@ -31,20 +31,20 @@
                         </div> -->
 
                         <div class="correo">
-                            {{agency.correo}}
+                            {{agency.email}}
                         </div>
                         <div class="descripcion-agency">
-                            {{agency.descripcion}}
-                            {{agency.descripcion}}
-                            {{agency.descripcion}}
-                            {{agency.descripcion}}
-                            {{agency.descripcion}}
-                            {{agency.descripcion}}
+                            {{agency.description}}
+                            {{agency.description}}
+                            {{agency.description}}
+                            {{agency.description}}
+                            {{agency.description}}
+                            {{agency.description}}
                         </div>
                         <div class="datos">
                             <div class="item">
                                 <div class="negrita">Ubicacion</div>
-                                <p>{{agency.ubicacion}}</p>
+                                <p>{{agency.location}}</p>
                             </div>
                             <div class="item">
                                 <div class="negrita">RUC</div>
@@ -52,13 +52,13 @@
                             </div>
                             <div class="item">
                                 <div class="negrita">Telefono</div>
-                                <p>{{agency.telefono}}</p>
+                                <p>{{agency.numberPhone}}</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="logo_stars">
-                        <img class="imagen-card" [src]="agency.logo" alt="">
+                        <img class="imagen-card" [src]="agency.photoUrl" alt="">
                         <div class="">
                             <div class="estrellas">
                                 <mat-icon class="estrella">star</mat-icon>
@@ -88,10 +88,10 @@
 
             <div class="list-card-travel">
 
-                <div class="card-travel" *ngFor="let travel of travels; let i = index">
+                <div class="card-travel" *ngFor="let travel of agency.travels">
                     <div class="" (click)="seeDetails(travel.id)">
-                        <img class="imagen-card-travel" [src]="travel.logo" alt="">
-                        <div class="descripcion-travel">{{descriptions[i]}}</div>
+                        <img class="imagen-card-travel" [src]="travel.photoLogo" alt="">
+                        <div class="descripcion-travel">{{travel.description}}</div>
                         <div class="estrellas-travel">
                             <mat-icon class="estrella-travel">star</mat-icon>
                             <mat-icon class="estrella-travel">star</mat-icon>
@@ -100,13 +100,13 @@
                             <mat-icon class="estrella-travel">star</mat-icon>
                         </div>
                         <div class="precio-travel">
-                            $ 480.00
+                            $ {{travel.price}}.00
                         </div>
                     </div>
 
                     <div class="delete">
                         <button mat-raised-button color="warn" style="color: #ffffff; font-size: 14px;"
-                            (click)="openCreateTravelDialog()">delete</button>
+                            (click)="deleteTravel(travel.id)">delete</button>
                     </div>
                 </div>
 

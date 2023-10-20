@@ -6,11 +6,11 @@
         <div class="list-card">
 
             <div class="card" *ngFor="let agency of agencies; let i = index">
-                <img class="imagen-card" [src]="agency.logo" alt="">
+                <img class="imagen-card" [src]="agency.photoUrl" alt="">
                 <div class="descripcion">
                     <div class="encabezado">
                         <div class="nombre">
-                            {{agency.nombre}}
+                            {{agency.name}}
                         </div>
                         <div class="estrellas">
                             <mat-icon class="estrella">star</mat-icon>
@@ -22,15 +22,15 @@
                     </div>
 
                     <div class="correo">
-                        {{agency.correo}}
+                        {{agency.email}}
                     </div>
                     <div class="descripcion-agency">
-                        {{agency.descripcion}}
+                        {{agency.description}}
                     </div>
                     <div class="datos">
                         <div class="item">
                             <div class="negrita">Ubicacion</div>
-                            <p>{{agency.ubicacion}}</p>
+                            <p>{{agency.location}}</p>
                         </div>
                         <div class="item">
                             <div class="negrita">RUC</div>
@@ -38,7 +38,7 @@
                         </div>
                         <div class="item">
                             <div class="negrita">Telefono</div>
-                            <p>{{agency.telefono}}</p>
+                            <p>{{agency.numberPhone}}</p>
                         </div>
                     </div>
                 </div>

@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { TravelService } from '../travels/travel.service';
-import { Travel } from 'src/app/models/travel';
-import { Agency } from 'src/app/models/agency';
-import { AgencyService } from '../agencies/agency.service';
 import { CreateActivitiesComponent } from '../create-activities/create-activities.component';
 import { MatDialog } from '@angular/material/dialog';
 import { CreateTipComponent } from '../create-tip/create-tip.component';
+import { TipService } from '../create-tip/tip.service';
+import { ActivityService } from '../create-activities/activity.service';
 
 @Component({
   selector: 'app-travel-description',
@@ -16,27 +15,26 @@ export class TravelDescriptionComponent implements OnInit {
   indice: number = -1
   travel: any = {}
   agency: any = {};
-  
-  constructor(private travelService: TravelService, private agencyService: AgencyService,
+
+  constructor(private travelService: TravelService,
+    private tipService: TipService,
+    private activityService: ActivityService,
     public dialog: MatDialog,
     public dialog2: MatDialog) {
 
   }
   ngOnInit(): void {
-    this.getTravels()
-    this.getAgencies()
+    this.getTravel()
   }
 
-  getTravels() {
-    this.travelService.getTravels().subscribe(
-      (travels) => {
-        let aux: any = localStorage.getItem("indice-travel")
-        this.indice = parseInt(aux)
-        this.travel = travels[this.indice-1];
-        console.log("indice llegado: "+ this.indice)
-        console.log("descripcion: " +travels[this.indice].titulo)
-        console.log("el arreglo: ")
-        console.log(travels)
+  getTravel() {
+    const aux: any = localStorage.getItem("indice-travel")
+    // this.indice = parseInt(aux)
+    this.travelService.getById(aux).subscribe(
+      (travel) => {
+        
+        this.travel = travel;
+        console.log(this.travel)
       },
       (error) => {
         console.error('Error al obtener los viajes:', error);
@@ -44,37 +42,50 @@ export class TravelDescriptionComponent implements OnInit {
     );
   }
 
-  getAgencies() {
-    this.agencyService.getAgencies().subscribe(
-      (agencies) => {
-        this.agency = agencies[this.travel.agencyId-1];
-      },
-      (error) => {
-        console.error('Error al obtener las agencias:', error);
-      }
-    );
-  }
+  
 
   openCreateActivityDialog(): void {
     const dialogRef = this.dialog.open(CreateActivitiesComponent, {
       width: 'auto',
-      // data: { ... }  // Si quieres pasar datos al diálogo
     });
   
     dialogRef.afterClosed().subscribe(result => {
       console.log('El diálogo se cerró');
-      // Aquí puedes manejar lo que suceda después de cerrar el diálogo
+      this.getTravel();
     });
   }
   openCreateTipDialog(): void {
     const dialogRef2 = this.dialog2.open(CreateTipComponent, {
       width: 'auto',
-      // data: { ... }  // Si quieres pasar datos al diálogo
     });
   
     dialogRef2.afterClosed().subscribe(result => {
       console.log('El diálogo se cerró');
-      // Aquí puedes manejar lo que suceda después de cerrar el diálogo
+      this.getTravel();
     });
+  }
+
+  deleteActivity(id: any) {
+    this.activityService.deleteActivity(id).subscribe(
+      (response) => {
+        console.log(response);
+        this.getTravel();
+      },
+      (error) => {
+        console.error('Error al eliminar la actividad:', error);
+      }
+    );
+  }
+
+  deleteTip(id: any) {
+    this.tipService.deleteTip(id).subscribe(
+      (response) => {
+        console.log(response);
+        this.getTravel();
+      },
+      (error) => {
+        console.error('Error al eliminar el tip:', error);
+      }
+    );
   }
 }

@@ -1,12 +1,12 @@
 <body>
     <div class="cards">
         <div class="titulo">
-            {{travel.titulo}}
+            {{travel.name}}
         </div>
         <div class="columna1">
             <div class="lugar columna2">
                 <mat-icon class="point">radio_button_checked</mat-icon>
-                <div class="lugar-nombre subtitulo">{{travel.lugar}}</div>
+                <div class="lugar-nombre subtitulo">{{travel.location}}</div>
             </div>
             <div class="estrellas">
                 <mat-icon class="estrella">star</mat-icon>
@@ -18,7 +18,7 @@
         </div>
         <div class="portada-imagenes">
             <div class="imagen-1">
-                <img class="imagen1" [src]="travel.photo1" alt="">
+                <img class="imagen1" [src]="travel.photoPortada" alt="">
             </div>
             <div class="imagenes-2-5">
                 <div class="imagenes-2-3 columna-2-imagenes">
@@ -27,34 +27,34 @@
                 </div>
                 <div class="imagenes-4-5 columna-2-imagenes">
                     <img class="imagenes-secundarias tercero" [src]="travel.photo4" alt="">
-                    <img class="imagenes-secundarias cuarto" [src]="travel.photo5" alt="">
+                    <img class="imagenes-secundarias cuarto" [src]="travel.photo1" alt="">
                 </div>
             </div>
         </div>
         <div class="columnas222">
             <div class="columna3">
-                <img [src]="travel.logo" alt="">
+                <img [src]="travel.agency.photoUrl" alt="">
                 <div class="descripcion-columna3">
                     <div class="titulo-columna3">
                         <div class="ofrecido">
                             Ofrecido por
                         </div>
                         <div class="negrita" style="margin-left: 0.5rem;">
-                            {{agency.nombre}}
+                            {{travel.agency.name}}
                         </div>
                     </div>
                     <div class="fecha-registro">
-                        {{travel.fechaRegistro}}
+                        {{travel.createdDate}}
                     </div>
                 </div>
                 <div class="precio">
-                    $ 480.00
+                    $ {{travel.price}}.00
                 </div>
             </div>
             <div></div>
         </div>
         <div class="descripcion-final">
-            {{travel.descripcion}}
+            {{travel.description}}
         </div>
     </div>
     <div class="columna_2">
@@ -65,15 +65,15 @@
                 <button mat-raised-button color="primary" style="background-color: #ace9fd; color: #000000" (click)="openCreateActivityDialog()">Nueva actividad</button>
             </div>
 
-            <div class="lista_tips" *ngFor="let activity of travel.activities; let i = index">
+            <div class="lista_tips" *ngFor="let activity of travel.activities">
                 <div class="point_container">
                     <mat-icon class="point">radio_button_checked</mat-icon>
                 </div>
                 <div class="titulo_activite" >
-                    <div class="negrita_activity">{{activity.titulo}}</div>
-                    <div class="descripcion_activity">{{activity.descripcion}}</div>
+                    <div class="negrita_activity">{{activity.name}}</div>
+                    <div class="descripcion_activity">{{activity.description}}</div>
                 </div>
-                <div class="boton-edit">
+                <div class="boton-edit" (click)="deleteActivity(activity.id)">
                     <mat-icon class="point">delete</mat-icon>
                 </div>
             </div>
@@ -84,11 +84,10 @@
                 <div class="negrita">Es bueno saberlo</div>
                 <button mat-raised-button color="primary" style="background-color: #ace9fd; color: #000000" (click)="openCreateTipDialog()">Nuevo tip</button>
             </div>
-            <div class="lista_tips">
+            <div class="lista_tips" *ngFor="let tip of travel.tips">
                 <mat-icon class="point">radio_button_checked</mat-icon>
                 <div class="titulo_activite">
-                    <div class="descripcion_activity">Con un guía partiremos desde la planta del nevado hasta 100m sobre
-                        esta. Con un guía partiremos desde la planta del nevado hasta 100m sobre esta.</div>
+                    <div class="descripcion_activity">{{tip.description}}</div>
                 </div>
                 <div class="boton-edit">
                     <mat-icon class="point">delete</mat-icon>

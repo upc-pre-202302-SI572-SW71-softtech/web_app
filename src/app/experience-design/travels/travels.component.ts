@@ -12,8 +12,8 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./travels.component.css']
 })
 export class TravelsComponent implements OnInit {
-  travels: any[] = []; // Arreglo para almacenar los datos de viaje
-  descriptions: any[] =[]
+  travels: Travel[] = []; // Arreglo para almacenar los datos de viaje
+  descriptions: string[] =[]
   constructor(private travelService: TravelService, private router: Router) {
   }
 
@@ -37,7 +37,7 @@ export class TravelsComponent implements OnInit {
   reduceCaracter() {
 
     for(let i=0;i<this.travels.length; i++){
-      this.descriptions.push(this.travels[i].descripcion)
+      this.descriptions.push(this.travels[i].description)
     }
 
     console.log("Descripciones: ")

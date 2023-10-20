@@ -1,16 +1,16 @@
 <body>
     <div class="no-found" *ngIf="this.travels.length==0">
             <h1 class="empty subarayado">Sorry...</h1>
-            <h1 class="empty">Somos la agencia {{agency.nombre}} proximamente estaremos agregando más viajes.</h1>
+            <h1 class="empty">Somos la agencia {{agency.name}} proximamente estaremos agregando más viajes.</h1>
     </div>
     <div class="cards" *ngIf="this.travels.length!=0">
         <div class="titulo-list-card">
-            Lista de viajes disponibles de la agencia {{agency.nombre}}
+            Lista de viajes disponibles de la agencia {{agency.name}}
         </div>
         <div   class="list-card">
 
-            <div class="card" *ngFor="let travel of travels; let i = index" (click)="seeDetails(travel.id)">
-                <img class="imagen-card" [src]="travel.logo" alt="">
+            <div class="card" *ngFor="let travel of agency.travels; let i = index" (click)="seeDetails(travel.id)">
+                <img class="imagen-card" [src]="travel.photoLogo" alt="">
                 <div class="descripcion">{{descriptions[i]}}</div>
                 <div class="estrellas">
                     <mat-icon class="estrella" >star</mat-icon>
@@ -20,7 +20,7 @@
                     <mat-icon class="estrella">star</mat-icon>
                 </div>
                 <div class="precio">
-                    $ 480.00
+                    $ {{travel.price}}.00
                 </div>
             </div>
 

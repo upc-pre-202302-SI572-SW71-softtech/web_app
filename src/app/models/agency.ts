@@ -1,10 +1,15 @@
-export interface Agency{
-    id: number;
-    nombre: string;
-    logo: string;
-    correo: string;
-    descripcion: string;
-    ubicacion: string;
-    ruc: number;
-    telefono: number;
-}
+import { Travel } from "./travel";
+
+export interface Agency {
+    id?: number;
+    name?: string;
+    photoUrl?: string;
+    description?: string;
+    email?: string;
+    location?: string;
+    ruc?: string;
+    numberPhone?: string; 
+    stars?: number;
+    travels?: Travel[];
+  }
+  
