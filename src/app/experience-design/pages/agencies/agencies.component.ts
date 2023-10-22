@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';import { AgencyService } from './agency.service';
-import { Agency } from 'src/app/models/agency';
+import { Component, OnInit } from '@angular/core';import { AgencyService } from '../../../account-management/service/agency.service';
+import { Agency } from 'src/app/account-management/model/agency';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./agencies.component.css']
 })
 export class AgenciesComponent implements OnInit {
-  agencies: Agency[] = []; 
+  agencies: Agency[] = [];
 
   constructor(private agencyService: AgencyService, private router: Router) { }
 

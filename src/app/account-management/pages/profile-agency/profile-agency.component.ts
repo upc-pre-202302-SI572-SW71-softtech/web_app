@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { AgencyService } from 'src/app/experience-design/agencies/agency.service';
-import { CreateTravelComponent } from 'src/app/experience-design/create-travel/create-travel.component';
-import { TravelService } from 'src/app/experience-design/travels/travel.service';
-import { Agency } from 'src/app/models/agency';
-
+import {Agency} from "../../model/agency";
+import {TravelService} from "../../../experience-design/services/travel.service";
+import {AgencyService} from "../../service/agency.service";
+import {CreateTravelComponent} from "../../../experience-design/components/create-travel/create-travel.component";
 @Component({
   selector: 'app-profile-agency',
   templateUrl: './profile-agency.component.html',
@@ -72,8 +71,8 @@ export class ProfileAgencyComponent implements OnInit {
 
   condition(e: number, texto: string) {
     if(e>=47) return true;
-    if(e>texto.length) return true;
-    return false;
+    return e > texto.length;
+
   }
 
   seeDetails(i:any){
@@ -98,7 +97,7 @@ export class ProfileAgencyComponent implements OnInit {
       width: 'auto',
       // data: { ... }  // Si quieres pasar datos al diálogo
     });
-  
+
     dialogRef.afterClosed().subscribe(result => {
       console.log('El diálogo se cerró');
       // Aquí puedes manejar lo que suceda después de cerrar el diálogo

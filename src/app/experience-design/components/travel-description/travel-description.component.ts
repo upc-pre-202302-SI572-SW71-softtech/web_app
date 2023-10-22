@@ -16,7 +16,7 @@ export class TravelDescriptionComponent implements OnInit {
   indice: number = -1
   travel: any = {}
   agency: any = {};
-  
+
   constructor(private travelService: TravelService, private agencyService: AgencyService,
     public dialog: MatDialog,
     public dialog2: MatDialog) {
@@ -60,7 +60,7 @@ export class TravelDescriptionComponent implements OnInit {
       width: 'auto',
       // data: { ... }  // Si quieres pasar datos al diálogo
     });
-  
+
     dialogRef.afterClosed().subscribe(result => {
       console.log('El diálogo se cerró');
       // Aquí puedes manejar lo que suceda después de cerrar el diálogo
@@ -71,7 +71,7 @@ export class TravelDescriptionComponent implements OnInit {
       width: 'auto',
       // data: { ... }  // Si quieres pasar datos al diálogo
     });
-  
+
     dialogRef2.afterClosed().subscribe(result => {
       console.log('El diálogo se cerró');
       // Aquí puedes manejar lo que suceda después de cerrar el diálogo
