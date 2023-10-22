@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AgenciesComponent } from './experience-design/agencies/agencies.component';
-import { TravelsComponent } from './experience-design/travels/travels.component';
-import { DevicesIotComponent } from './iot-managament/devices-iot/devices-iot.component';
-import { TravelDescriptionComponent } from './experience-design/travel-description/travel-description.component';
-import { SearchComponent } from './experience-design/search/search.component';
-import { CreateTravelComponent } from './experience-design/create-travel/create-travel.component';
-import { ProfileAgencyComponent } from './account-agency/profile-agency/profile-agency.component';
-import { CreateActivitiesComponent } from './experience-design/create-activities/create-activities.component';
-
+import {AgenciesComponent} from "./experience-design/pages/agencies/agencies.component";
+import {TravelsComponent} from "./experience-design/pages/travels/travels.component";
+import {DevicesIotComponent} from "./iot-managament/pages/devices-iot/devices-iot.component";
+import {
+  TravelDescriptionComponent
+} from "./experience-design/components/travel-description/travel-description.component";
+import {SearchComponent} from "./experience-design/components/search/search.component";
+import {CreateTravelComponent} from "./experience-design/components/create-travel/create-travel.component";
+import {ProfileAgencyComponent} from "./account-management/pages/profile-agency/profile-agency.component";
+import {CreateActivitiesComponent} from "./experience-design/components/create-activities/create-activities.component";
 const routes: Routes = [
   {path: 'list-agencies', component:AgenciesComponent},
   {path: 'list-travels', component:TravelsComponent},

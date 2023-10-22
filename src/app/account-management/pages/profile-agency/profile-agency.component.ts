@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { AgencyService } from 'src/app/experience-design/agencies/agency.service';
-import { CreateTravelComponent } from 'src/app/experience-design/create-travel/create-travel.component';
-import { TravelService } from 'src/app/experience-design/travels/travel.service';
-import { Agency } from 'src/app/models/agency';
-
+import {Agency} from "../../model/agency";
+import {TravelService} from "../../../experience-design/services/travel.service";
+import {AgencyService} from "../../service/agency.service";
+import {CreateTravelComponent} from "../../../experience-design/components/create-travel/create-travel.component";
 @Component({
   selector: 'app-profile-agency',
   templateUrl: './profile-agency.component.html',
