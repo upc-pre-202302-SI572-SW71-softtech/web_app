@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { TravelService } from '../travels/travel.service';
+import { TravelService } from '../../services/travel.service';
 import { Router } from '@angular/router';
-import { Agency } from 'src/app/models/agency';
-import { AgencyService } from '../agencies/agency.service';
+import { Agency } from 'src/app/account-management/model/agency';
+import { AgencyService } from '../../../account-management/service/agency.service';
 
 @Component({
   selector: 'app-search',
@@ -13,10 +13,10 @@ export class SearchComponent implements OnInit{
   travels: any[] = []; // Arreglo para almacenar los datos de viaje
   travelsAux: any[]=[];
   descriptions: any[] =[]
-  agency: any = {}; 
+  agency: any = {};
   agencyId: any = ""
   constructor(private travelService: TravelService, private router: Router, private agencyService: AgencyService) {
-    
+
   }
 
   ngOnInit() {
@@ -29,7 +29,7 @@ export class SearchComponent implements OnInit{
     this.agencyId = parseInt(indice)
     this.travelService.getTravelsByAgencyId(this.agencyId).subscribe(
       (travels) => {
-        
+
         this.travels = travels;
         this.reduceCaracter();
       },
@@ -83,7 +83,7 @@ export class SearchComponent implements OnInit{
   }
 
   seeDetails(id:any){
-    
+
     localStorage.removeItem("indice-travel")
         localStorage.setItem("indice-travel",id.toString())
         this.router.navigate(["/travel-description"])

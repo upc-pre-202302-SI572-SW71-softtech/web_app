@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { TravelService } from '../travels/travel.service';
-import { Travel } from 'src/app/models/travel';
-import { Agency } from 'src/app/models/agency';
-import { AgencyService } from '../agencies/agency.service';
+import { TravelService } from '../../services/travel.service';
+import { Travel } from 'src/app/experience-design/models/travel';
+import { Agency } from 'src/app/account-management/model/agency';
+import { AgencyService } from '../../../account-management/service/agency.service';
 
 @Component({
   selector: 'app-travel-description',
@@ -13,7 +13,7 @@ export class TravelDescriptionComponent implements OnInit {
   indice: number = -1
   travel: any = {}
   agency: any = {};
-  
+
   constructor(private travelService: TravelService, private agencyService: AgencyService,) {
 
   }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AgencyService } from 'src/app/experience-design/agencies/agency.service';
-import { Agency } from 'src/app/models/agency';
+import { AgencyService } from 'src/app/account-management/service/agency.service';
+import { Agency } from 'src/app/account-management/model/agency';
 
 @Component({
   selector: 'app-profile-agency',

@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Agency } from 'src/app/models/agency';
+import { Agency } from 'src/app/account-management/model/agency';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AgencyService {
-  
+
   private apiUrl = 'https://my-json-server.typicode.com/QuispeJerry/data/agencies';
 
   constructor(private http: HttpClient) { }

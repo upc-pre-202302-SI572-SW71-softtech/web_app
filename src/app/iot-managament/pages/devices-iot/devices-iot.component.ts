@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { Card } from "src/app/models/card";
-import { DevicesIotService } from "./devices-iot.service";
+import { Card } from "src/app/experience-design/models/card";
+import { DevicesIotService } from "../../services/devices-iot.service";
 
 
 @Component({
