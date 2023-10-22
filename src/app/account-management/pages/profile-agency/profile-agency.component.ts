@@ -71,8 +71,8 @@ export class ProfileAgencyComponent implements OnInit {
 
   condition(e: number, texto: string) {
     if(e>=47) return true;
-    if(e>texto.length) return true;
-    return false;
+    return e > texto.length;
+
   }
 
   seeDetails(i:any){
