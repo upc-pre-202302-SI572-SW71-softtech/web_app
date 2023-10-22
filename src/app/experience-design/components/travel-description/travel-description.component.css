@@ -217,11 +217,21 @@ body{
 
 .lista_tips{
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 10% 75% 15%;
     margin-top: 1rem;
 }
 
 .negrita_activity{
     font-size: 14px;
     font-weight: 700;
+}
+
+.titulo-boton-actividad{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+}
+
+.boton-edit{
+    
 }

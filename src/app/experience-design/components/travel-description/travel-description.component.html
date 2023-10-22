@@ -60,7 +60,10 @@
     <div class="columna_2">
 
         <div class="izquierda">
-            <div class="negrita">Las actividades que realizarás</div>
+            <div class="titulo-boton-actividad">
+                <div class="negrita">Las actividades que realizarás</div>
+                <button mat-raised-button color="primary" style="background-color: #ace9fd; color: #000000" (click)="openCreateActivityDialog()">Nueva actividad</button>
+            </div>
 
             <div class="lista_tips" *ngFor="let activity of travel.activities; let i = index">
                 <div class="point_container">
@@ -70,16 +73,25 @@
                     <div class="negrita_activity">{{activity.titulo}}</div>
                     <div class="descripcion_activity">{{activity.descripcion}}</div>
                 </div>
+                <div class="boton-edit">
+                    <mat-icon class="point">delete</mat-icon>
+                </div>
             </div>
         </div>
 
         <div class="derecha">
-            <div class="negrita">Es bueno saberlo</div>
+            <div class="titulo-boton-actividad">
+                <div class="negrita">Es bueno saberlo</div>
+                <button mat-raised-button color="primary" style="background-color: #ace9fd; color: #000000" (click)="openCreateTipDialog()">Nuevo tip</button>
+            </div>
             <div class="lista_tips">
                 <mat-icon class="point">radio_button_checked</mat-icon>
                 <div class="titulo_activite">
                     <div class="descripcion_activity">Con un guía partiremos desde la planta del nevado hasta 100m sobre
                         esta. Con un guía partiremos desde la planta del nevado hasta 100m sobre esta.</div>
+                </div>
+                <div class="boton-edit">
+                    <mat-icon class="point">delete</mat-icon>
                 </div>
             </div>
         </div>
