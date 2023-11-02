@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,12 +10,14 @@ export class LoginComponent {
   username: string = '';
   password: string = '';
 
-  onSubmit() {
+  constructor(private router: Router) { }
 
-    if (this.username === 'usuario' && this.password === 'contrasena') {
-   
+  onSubmit() {
+    if (this.username === 'admin' && this.password === 'admin') {
+      this.router.navigate(['/home']);
     } else {
       alert('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
     }
   }
+  
 }

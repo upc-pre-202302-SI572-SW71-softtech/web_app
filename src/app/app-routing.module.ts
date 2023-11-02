@@ -8,6 +8,7 @@ import { SearchComponent } from './experience-design/search/search.component';
 import { CreateTravelComponent } from './experience-design/create-travel/create-travel.component';
 import { ProfileAgencyComponent } from './account-agency/profile-agency/profile-agency.component';
 import { CreateActivitiesComponent } from './experience-design/create-activities/create-activities.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path: 'list-agencies', component:AgenciesComponent},
@@ -18,8 +19,29 @@ const routes: Routes = [
   {path: 'create-travels', component:CreateTravelComponent},
   {path: 'profile-agency', component:ProfileAgencyComponent},
   {path: 'create-activity', component:CreateActivitiesComponent},
+  {path: 'login', component: LoginComponent},
   {path: '**', redirectTo: 'list-agencies', pathMatch: 'full'},
 ];
+
+// const routes: Routes = [
+//   {
+//     path: 'home',
+//     component: HomeComponent,
+//     children: [
+//       { path: 'list-agencies', component: AgenciesComponent },
+//       { path: 'list-travels', component: TravelsComponent },
+//       { path: 'list-devices-iot', component: DevicesIotComponent },
+//       { path: 'travel-description', component: TravelDescriptionComponent },
+//       { path: 'search-travels', component: SearchComponent },
+//       { path: 'create-travels', component: CreateTravelComponent },
+//       { path: 'profile-agency', component: ProfileAgencyComponent },
+//       { path: 'create-activity', component: CreateActivitiesComponent },
+//     ],
+//   },
+//   { path: 'login', component: LoginComponent },
+//   { path: '', redirectTo: 'login', pathMatch: 'full' },
+// ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
