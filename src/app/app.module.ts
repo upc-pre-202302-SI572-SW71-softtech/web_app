@@ -26,6 +26,7 @@ import { CreateActivitiesComponent } from './experience-design/create-activities
 import { CreateTipComponent } from './experience-design/create-tip/create-tip.component';
 
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { FormsModule } from '@angular/forms';
     CreateTravelComponent,
     ProfileAgencyComponent,
     CreateActivitiesComponent,
-    CreateTipComponent
+    CreateTipComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
