@@ -25,7 +25,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { CreateActivitiesComponent } from './experience-design/create-activities/create-activities.component';
 import { CreateTipComponent } from './experience-design/create-tip/create-tip.component';
 
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { RegisterFormComponent } from './auth/components/register-form/register-form.component';
 
 
 @NgModule({
@@ -40,20 +41,22 @@ import { FormsModule } from '@angular/forms';
     CreateTravelComponent,
     ProfileAgencyComponent,
     CreateActivitiesComponent,
-    CreateTipComponent
+    CreateTipComponent,
+    RegisterFormComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatIconModule,
-    MatButtonModule,
-    MatMenuModule,
-    HttpClientModule,
-    MatInputModule,
-    MatDialogModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        MatButtonModule,
+        MatMenuModule,
+        HttpClientModule,
+        MatInputModule,
+        MatDialogModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
