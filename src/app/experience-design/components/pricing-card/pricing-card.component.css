@@ -1,0 +1,35 @@
+.pricing-card-container {
+  @apply flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow  xl:p-8;
+}
+.header{
+  @apply mb-4 text-2xl font-semibold;
+}
+.card-description{
+  @apply font-light text-gray-500 sm:text-lg;
+}
+.price-section {
+  @apply flex justify-center items-baseline my-8;
+}
+.price{
+  @apply mr-2 text-5xl font-extrabold;
+}
+.pricing-period{
+  @apply text-gray-500;
+}
+
+.list-section {
+  @apply mb-8 space-y-4 text-left;
+}
+.list-item{
+  @apply flex items-center space-x-3;
+}
+.list-item-icon{
+  @apply flex-shrink-0 w-5 h-5 text-green-500;
+}
+
+
+.button{
+  @apply text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center;
+}
+
+

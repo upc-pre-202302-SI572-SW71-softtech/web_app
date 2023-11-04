@@ -1,0 +1,37 @@
+<div class="pricing-card-container">
+  <h3 class="header">{{this.pricingData.title}}</h3>
+  <p class="card-description">{{this.pricingData.description}}</p>
+  <div class="price-section">
+    <span class="price">{{this.pricingData.price}}</span>
+    <span class="pricing-period">/{{this.pricingData.period}}</span>
+  </div>
+  <!-- List -->
+  <ul role="list" class="list-section">
+    <li class="list-item">
+      <!-- Icon -->
+      <svg class="list-item-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+      <span>{{this.pricingData.firstFeat}}</span>
+    </li>
+    <li class="list-item">
+      <!-- Icon -->
+      <svg class="list-item-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+      <span>{{this.pricingData.secondFeat}}</span>
+    </li>
+    <li class="list-item">
+      <!-- Icon -->
+      <svg class="list-item-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+      <span>Package size: <span class="font-semibold">{{this.pricingData.devicesAmount}} devices</span></span>
+    </li>
+    <li class="list-item">
+      <!-- Icon -->
+      <svg class="list-item-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+      <span>Premium support: <span class="font-semibold">{{this.pricingData.premiumSupport}} months</span></span>
+    </li>
+    <li class="list-item">
+      <!-- Icon -->
+      <svg class="list-item-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+      <span>Free updates: <span class="font-semibold">{{this.pricingData.freeUpdates}} months</span></span>
+    </li>
+  </ul>
+  <a href="#" class="button">Get started</a>
+</div>

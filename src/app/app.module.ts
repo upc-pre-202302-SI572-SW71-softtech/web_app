@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './experience-design/header/header.component';
 import { TravelsComponent } from './experience-design/travels/travels.component';
 import { AgenciesComponent } from './experience-design/agencies/agencies.component';
-
+import { PricingCardComponent } from './experience-design/components/pricing-card/pricing-card.component';
 // angular material
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -27,6 +27,7 @@ import { CreateTipComponent } from './experience-design/create-tip/create-tip.co
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RegisterFormComponent } from './auth/components/register-form/register-form.component';
+import { PricingPageComponent } from './experience-design/pages/pricing-page/pricing-page.component';
 
 
 @NgModule({
@@ -42,7 +43,9 @@ import { RegisterFormComponent } from './auth/components/register-form/register-
     ProfileAgencyComponent,
     CreateActivitiesComponent,
     CreateTipComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    PricingPageComponent,
+    PricingCardComponent
   ],
     imports: [
         BrowserModule,
