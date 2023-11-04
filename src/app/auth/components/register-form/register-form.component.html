@@ -1,0 +1,139 @@
+<section class="register-section">
+  <div class="register-section-inside">
+    <a href="#" class="brand-header">
+      <img
+        class="brand-img"
+        src="https://i.pinimg.com/736x/ac/50/d1/ac50d1d14bbe26811dc5d15844bb5ec6.jpg"
+        alt="logo" />
+      Go2Climb
+    </a>
+    <div class="register-form-section">
+      <div class="form-container">
+        <h1 class="form-title">Create and account</h1>
+        <form
+          class="form"
+          action="#"
+          [formGroup]="managerForm"
+          (submit)="onSubmit()">
+          <div>
+            <label for="email" class="email-input-label"
+            >First name</label
+            >
+            <input
+              type="text"
+              name="name"
+              id="first-name"
+              class="email-input"
+              placeholder="your name"
+              required="true"
+              formControlName="firstName" />
+          </div>
+          <div>
+            <label for="email" class="email-input-label"
+            >Last name</label
+            >
+            <input
+              type="text"
+              name="email"
+              id="last-name"
+              class="email-input"
+              placeholder="Moron"
+              required="true"
+              formControlName="lastName" />
+          </div>
+          <div>
+            <label for="age" class="age-input-label"
+            >Age
+              <span class="text-red-500">*</span></label
+            >
+            <input
+              type="number"
+              name=""
+              id="age"
+              class="email-input"
+              placeholder="30"
+              required="true"
+              formControlName="age" />
+          </div>
+
+          <div>
+            <label for="email" class="email-input-label"
+            >Your email</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="email-input"
+              placeholder="name@company.com"
+              formControlName="email"
+              required="true" />
+          </div>
+          <div>
+            <label
+              for="password"
+              class="password-input-label"
+            >Password</label
+            >
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="••••••••"
+              class="password-input"
+              required="true" />
+          </div>
+          <div>
+            <label
+              for="confirm-password"
+              class="confirm-password-label"
+            >Confirm password</label
+            >
+            <input
+              type="password"
+              name="confirm-password"
+              id="confirm-password"
+              placeholder="••••••••"
+              class="confirm-password-input"
+              formControlName="password"
+              required="true" />
+          </div>
+          <div class="terms-conditions-acceptance">
+            <div class="flex items-center h-5">
+              <input
+                id="terms"
+                aria-describedby="terms"
+                type="checkbox"
+                class="checkbox-terms-conditions"
+                required="true" />
+            </div>
+            <div class="ml-3 text-sm">
+              <label
+                for="terms"
+                class="font-light text-gray-500"
+              >I accept the
+                <a
+                  class="font-medium text-primary-600 hover:underline"
+                  href="#"
+                >Terms and Conditions</a
+                ></label
+              >
+            </div>
+          </div>
+          <button type="submit" class="submit-button">
+            Create an account
+          </button>
+          <p class="have-account-statement">
+            Already have an account?
+            <a
+              href="#"
+              [routerLink]="'/login'"
+              class="font-medium text-primary-600 hover:underline"
+            >Login here</a
+            >
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
