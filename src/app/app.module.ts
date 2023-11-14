@@ -27,6 +27,7 @@ import { CreateTipComponent } from './experience-design/create-tip/create-tip.co
 
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './xperience-desing/home/home.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { LoginComponent } from './login/login.component';
     ProfileAgencyComponent,
     CreateActivitiesComponent,
     CreateTipComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

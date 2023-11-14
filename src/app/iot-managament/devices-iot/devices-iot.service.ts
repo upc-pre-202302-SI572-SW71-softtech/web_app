@@ -7,7 +7,7 @@ import { Card } from 'src/app/models/card';
   providedIn: 'root'
 })
 export class DevicesIotService {
-  private baseUrl = 'https://my-json-server.typicode.com/QuispeJerry/data-iot/cards';  // Assuming json-server is running on default port
+  private baseUrl = 'https://my-json-server.typicode.com/QuispeJerry/data-iot/cards';
 
   constructor(private http: HttpClient) { }
 
