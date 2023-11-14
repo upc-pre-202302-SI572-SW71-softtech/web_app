@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './experience-design/header/header.component';
 import { TravelsComponent } from './experience-design/travels/travels.component';
 import { AgenciesComponent } from './experience-design/agencies/agencies.component';
-
+import { PricingCardComponent } from './experience-design/components/pricing-card/pricing-card.component';
 // angular material
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -24,11 +24,13 @@ import { ProfileAgencyComponent } from './account-agency/profile-agency/profile-
 import {MatDialogModule} from '@angular/material/dialog';
 import { CreateActivitiesComponent } from './experience-design/create-activities/create-activities.component';
 import { CreateTipComponent } from './experience-design/create-tip/create-tip.component';
-
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './xperience-desing/home/home.component';
 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { RegisterFormComponent } from './auth/components/register-form/register-form.component';
+import { PricingPageComponent } from './experience-design/pages/pricing-page/pricing-page.component';
+import { HomeComponent } from './xperience-desing/home/home.component';
 
 @NgModule({
   declarations: [
@@ -43,21 +45,25 @@ import { HomeComponent } from './xperience-desing/home/home.component';
     ProfileAgencyComponent,
     CreateActivitiesComponent,
     CreateTipComponent,
+    RegisterFormComponent,
+    PricingPageComponent,
+    PricingCardComponent,
     LoginComponent,
     HomeComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatIconModule,
-    MatButtonModule,
-    MatMenuModule,
-    HttpClientModule,
-    MatInputModule,
-    MatDialogModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        MatButtonModule,
+        MatMenuModule,
+        HttpClientModule,
+        MatInputModule,
+        MatDialogModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
