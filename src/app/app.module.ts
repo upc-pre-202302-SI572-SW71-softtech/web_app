@@ -24,9 +24,7 @@ import { ProfileAgencyComponent } from './account-agency/profile-agency/profile-
 import {MatDialogModule} from '@angular/material/dialog';
 import { CreateActivitiesComponent } from './experience-design/create-activities/create-activities.component';
 import { CreateTipComponent } from './experience-design/create-tip/create-tip.component';
-import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
-
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RegisterFormComponent } from './auth/components/register-form/register-form.component';
 import { PricingPageComponent } from './experience-design/pages/pricing-page/pricing-page.component';
