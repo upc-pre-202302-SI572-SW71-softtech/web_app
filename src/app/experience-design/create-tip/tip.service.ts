@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TipService {
-  private apiUrl = 'http://localhost:8105/api/tip';
+  private apiUrl = 'https://webservice-oldb.onrender.com/api/tip';
 
   constructor(private http: HttpClient) {}
 

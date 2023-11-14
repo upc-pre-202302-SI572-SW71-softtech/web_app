@@ -26,12 +26,11 @@ import { CreateActivitiesComponent } from './experience-design/create-activities
 import { CreateTipComponent } from './experience-design/create-tip/create-tip.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RegisterFormComponent } from './auth/components/register-form/register-form.component';
 import { PricingPageComponent } from './experience-design/pages/pricing-page/pricing-page.component';
-
-
-
+import { HomeComponent } from './xperience-desing/home/home.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +48,8 @@ import { PricingPageComponent } from './experience-design/pages/pricing-page/pri
     RegisterFormComponent,
     PricingPageComponent,
     PricingCardComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
     imports: [
         BrowserModule,

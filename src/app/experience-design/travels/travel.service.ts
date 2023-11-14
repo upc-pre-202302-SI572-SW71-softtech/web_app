@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class TravelService {
 
-  private apiUrl = 'http://localhost:8105/api/travel'; 
+  private apiUrl = 'https://webservice-oldb.onrender.com/api/travel'; 
 
   constructor(private http: HttpClient) {}
 

@@ -11,6 +11,7 @@ import { CreateActivitiesComponent } from './experience-design/create-activities
 import {RegisterFormComponent} from "./auth/components/register-form/register-form.component";
 import {PricingPageComponent} from "./experience-design/pages/pricing-page/pricing-page.component";
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './xperience-desing/home/home.component';
 
 
 const routes: Routes = [
@@ -25,28 +26,9 @@ const routes: Routes = [
   {path: 'pricing', component:PricingPageComponent},
   {path: 'create-activity', component:CreateActivitiesComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'home', component: HomeComponent},
   {path: '**', redirectTo: 'list-agencies', pathMatch: 'full'},
 ];
-
-// const routes: Routes = [
-//   {
-//     path: 'home',
-//     component: HomeComponent,
-//     children: [
-//       { path: 'list-agencies', component: AgenciesComponent },
-//       { path: 'list-travels', component: TravelsComponent },
-//       { path: 'list-devices-iot', component: DevicesIotComponent },
-//       { path: 'travel-description', component: TravelDescriptionComponent },
-//       { path: 'search-travels', component: SearchComponent },
-//       { path: 'create-travels', component: CreateTravelComponent },
-//       { path: 'profile-agency', component: ProfileAgencyComponent },
-//       { path: 'create-activity', component: CreateActivitiesComponent },
-//     ],
-//   },
-//   { path: 'login', component: LoginComponent },
-//   { path: '', redirectTo: 'login', pathMatch: 'full' },
-// ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
