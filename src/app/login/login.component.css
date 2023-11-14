@@ -1,9 +1,10 @@
+/*
 
 .login-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+  max-width: 800px; !* Ajusta el ancho máximo según tus necesidades *!
   margin: 0 auto;
   padding: 20px;
   background-color: #f7f7f7;
@@ -64,4 +65,65 @@ button:hover {
 .login-image img {
   max-width: 100%;
   height: auto;
+}*/
+
+.page-container{
+  @apply flex flex-row w-full h-full p-16 bg-[url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)] bg-cover bg-center;
 }
+.right-side{
+  @apply flex bg-[url('https://images.pexels.com/photos/1450082/pexels-photo-1450082.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center h-full w-1/2 justify-center items-center rounded-r-3xl;
+
+}
+.right-side-info{
+  @apply flex flex-col-reverse w-1/2;
+
+  .right-side-tittle{
+    @apply text-white text-3xl font-semibold text-center mb-5;
+  }
+  .right-side-content{
+    @apply text-white text-sm font-light text-center;
+  }
+}
+
+
+.register-section{
+  @apply flex bg-gray-50 h-full pt-4 w-1/2 rounded-l-3xl drop-shadow;
+}
+.register-section-inside{
+  @apply flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0 w-full h-full;
+}
+.brand-header{
+  @apply flex items-center mb-6 text-2xl font-semibold text-gray-900;
+}
+.brand-img{
+  @apply w-8 h-8 mr-2;
+}
+.register-form-section{
+  @apply w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0;
+}
+.form-container{
+  @apply p-6 space-y-4 md:space-y-6 sm:p-8 ;
+}
+.form-title{
+  @apply text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl text-center;
+}
+.form{
+  @apply space-y-4 md:space-y-6;
+}
+.email-input-label{
+  @apply block mb-2 text-sm font-medium text-gray-900;
+}
+.email-input{
+  @apply bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg  block w-full p-2.5;
+}
+.password-input-label{
+  @apply block mb-2 text-sm font-medium text-gray-900;
+}
+.password-input{
+  @apply bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg  block w-full p-2.5;
+}
+
+.submit-button{
+  @apply w-full text-white bg-primary-600 hover:bg-primary-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center;
+}
+
