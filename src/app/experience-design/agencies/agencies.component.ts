@@ -30,6 +30,7 @@ export class AgenciesComponent implements OnInit {
 
   search(id: any) {
     localStorage.setItem("name-agency", id)
+    console.log("id: " + id)
     this.router.navigate(["/search-travels"])
   }
 

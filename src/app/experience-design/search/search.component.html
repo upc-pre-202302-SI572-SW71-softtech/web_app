@@ -1,15 +1,15 @@
 <body>
-    <div class="no-found" *ngIf="this.travels.length==0">
+    <div class="no-found" *ngIf="this.travelsAux.length<=0">
             <h1 class="empty subarayado">Sorry...</h1>
             <h1 class="empty">Somos la agencia {{agency.name}} proximamente estaremos agregando más viajes.</h1>
     </div>
-    <div class="cards" *ngIf="this.travels.length!=0">
+    <div class="cards" *ngIf="this.travelsAux.length>=1">
         <div class="titulo-list-card">
             Lista de viajes disponibles de la agencia {{agency.name}}
         </div>
         <div   class="list-card">
 
-            <div class="card" *ngFor="let travel of agency.travels; let i = index" (click)="seeDetails(travel.id)">
+            <div class="card" *ngFor="let travel of this.travelsAux; let i = index" (click)="seeDetails(travel.id)">
                 <img class="imagen-card" [src]="travel.photoLogo" alt="">
                 <div class="descripcion">{{descriptions[i]}}</div>
                 <div class="estrellas">
