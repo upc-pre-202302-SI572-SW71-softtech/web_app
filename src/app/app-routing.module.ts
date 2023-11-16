@@ -27,7 +27,7 @@ const routes: Routes = [
   {path: 'create-activity', component:CreateActivitiesComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
-  {path: '**', redirectTo: 'list-agencies', pathMatch: 'full'},
+  {path: '**', redirectTo: 'login', pathMatch: 'full'},
 ];
 
 @NgModule({
