@@ -35,26 +35,21 @@ export class TravelsComponent implements OnInit {
   }
 
   reduceCaracter() {
-
-    for(let i=0;i<this.travels.length; i++){
-      this.descriptions.push(this.travels[i].description)
-    }
-
-    console.log("Descripciones: ")
-    console.log(this.descriptions)
-
-    for (let i = 0; i< this.travels.length; i++){
-      let texto = this.descriptions[i]
-      let aux: string = ""
-      let e:number = 0
-      while(!this.condition(e, texto)){
-        aux = aux + texto[e]
-        e++
-      }
-      this.descriptions[i] = aux + "..."
-    }
+    // Llenar el arreglo descriptions con las descripciones originales
+    this.descriptions = this.travels.map(travel => travel.description);
+  
+    console.log("Descripciones originales: ");
+    console.log(this.descriptions);
+  
+    // Actualizar cada descripción según las condiciones dadas
+    this.descriptions = this.descriptions.map(description => {
+      return description.length > 43 ? description.substring(0, 43) + '...' : description + '...';
+    });
+  
+    console.log("Descripciones actualizadas: ");
+    console.log(this.descriptions);
   }
-
+  
   condition(e: number, texto: string) {
     if(e>=47) return true;
     if(e>texto.length) return true;

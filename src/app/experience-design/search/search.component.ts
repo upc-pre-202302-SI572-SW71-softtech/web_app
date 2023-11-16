@@ -20,60 +20,31 @@ export class SearchComponent implements OnInit{
   }
 
   ngOnInit() {
-    
-    this.getAgencies()
+    this.getAgencies();
   }
-
   
   getAgencies() {
-    // this.agencyService.getAgencies().subscribe(
-    //   (agencies) => {
-    //     this.agency = agencies[this.agencyId-1];
-    //   },
-    //   (error) => {
-    //     console.error('Error al obtener las agencias:', error);
-    //   }
-    // );
-    
     this.agencyService.getByid(this.agencyId).subscribe(
       (agency) => {
         this.agency = agency;
         this.travelsAux = this.agency.travels;
-        console.log("agencia: ");
-        console.log(this.agency);
-        console.log("travelsAux: ");
-        console.log(this.travelsAux);
+        this.reduceCaracter(); // Llamar a la función aquí después de obtener los viajes
       },
       (error) => {
         console.error('Error al obtener las agencias:', error);
       }
     );
-
   }
 
 
   reduceCaracter() {
-
-    for(let i=0;i<this.travels.length; i++){
-      this.descriptions.push(this.travels[i].description)
-    }
-
-    // console.log("Descripciones: ")
-    // console.log(this.descriptions)
-
-    for (let i = 0; i< this.travels.length; i++){
-      let texto = this.descriptions[i]
-      let aux: string = ""
-      let e:number = 0
-      while(!this.condition(e, texto)){
-        aux = aux + texto[e]
-        e++
-      }
-      this.descriptions[i] = aux + "..."
-    }
-
-    // console.log("Descripciones: ")
-    // console.log(this.descriptions)
+    // Llenar el arreglo descriptions con las descripciones originales de travelsAux
+    this.descriptions = this.travelsAux.map(travel => travel.description);
+  
+    // Actualizar cada descripción según las condiciones dadas
+    this.descriptions = this.descriptions.map(description => {
+      return description.length > 43 ? description.substring(0, 43) + '...' : description + '...';
+    });
   }
 
   condition(e: number, texto: string) {

@@ -30,7 +30,7 @@ body{
 
 .card{
     width: 15rem;
-    height: 15rem;
+    height: 18rem;
     border-radius: 20px;
     padding: 2rem;
     text-align: center;
@@ -58,7 +58,7 @@ body{
 }
 
 .descripcion{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     justify-content: center;
     text-align: center;
@@ -86,7 +86,7 @@ body{
 
 .precio{
     margin-top: 5%;
-    font-size: 28px;
+    font-size: 23px;
     font-weight: 600;
     justify-content: center;
     text-align: center;
