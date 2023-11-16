@@ -8,7 +8,7 @@ import { Agency } from 'src/app/models/agency';
 })
 export class AgencyService {
   
-  private apiUrl = 'https://webservice-oldb.onrender.com/api/agencies';
+  private apiUrl = 'http://localhost:8080/api/agencies';
 
   constructor(private http: HttpClient) { }
 
