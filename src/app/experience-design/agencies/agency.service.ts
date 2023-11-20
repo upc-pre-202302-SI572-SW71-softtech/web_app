@@ -8,7 +8,7 @@ import { Agency } from 'src/app/models/agency';
 })
 export class AgencyService {
   
-  private apiUrl = 'http://localhost:8080/api/agencies';
+  private apiUrl = 'https://backendiot.onrender.com/api/agencies';
 
   constructor(private http: HttpClient) { }
 

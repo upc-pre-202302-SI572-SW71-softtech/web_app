@@ -247,3 +247,11 @@ body{
     border: 3px solid #338DD6;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
+
+
+.map_ {
+	height: 500px;
+	width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}

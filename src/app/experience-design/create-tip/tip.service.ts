@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TipService {
-  private apiUrl = 'http://localhost:8080/api/tip';
+  private apiUrl = 'https://backendiot.onrender.com/api/tip';
 
   constructor(private http: HttpClient) {}
 

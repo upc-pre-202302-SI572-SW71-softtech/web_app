@@ -1,3 +1,4 @@
+/// <reference types="@types/googlemaps" />
 import { Component, OnInit } from '@angular/core';
 import { TravelService } from '../travels/travel.service';
 import { CreateActivitiesComponent } from '../create-activities/create-activities.component';
@@ -5,6 +6,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { CreateTipComponent } from '../create-tip/create-tip.component';
 import { TipService } from '../create-tip/tip.service';
 import { ActivityService } from '../create-activities/activity.service';
+
+declare var google: any;
 
 @Component({
   selector: 'app-travel-description',
@@ -24,7 +27,7 @@ export class TravelDescriptionComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.getTravel()
+    this.getTravel();
   }
 
   getTravel() {
@@ -35,6 +38,7 @@ export class TravelDescriptionComponent implements OnInit {
         
         this.travel = travel;
         console.log(this.travel)
+        this.iniciarMap();
       },
       (error) => {
         console.error('Error al obtener los viajes:', error);
@@ -88,4 +92,27 @@ export class TravelDescriptionComponent implements OnInit {
       }
     );
   }
+
+iniciarMap() {
+  if (this.travel && this.travel.location) {
+    const geocoder = new google.maps.Geocoder();
+    geocoder.geocode({ 'address': this.travel.location }, (results: google.maps.GeocoderResult[], status: google.maps.GeocoderStatus) => {
+      if (status === google.maps.GeocoderStatus.OK) {
+        const map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: results[0].geometry.location
+        });
+        new google.maps.Marker({
+          position: results[0].geometry.location,
+          map: map
+        });
+      } else {
+        console.error('Geocode no fue exitoso por la siguiente razón: ' + status);
+      }
+    });
+  } else {
+    console.error('No hay información de ubicación disponible');
+  }
+}
+
 }

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ActivityService {
-  private apiUrl = 'http://localhost:8080/api/activity';
+  private apiUrl = 'https://backendiot.onrender.com/api/activity';
 
   constructor(private http: HttpClient) {}
 
