@@ -12,6 +12,8 @@ import {RegisterFormComponent} from "./auth/components/register-form/register-fo
 import {PricingPageComponent} from "./experience-design/pages/pricing-page/pricing-page.component";
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './xperience-desing/home/home.component';
+import { IotMilestoneComponent } from './iot-managament/iot-milestone/iot-milestone.component';
+import { MetricsDeviceComponent } from './iot-managament/pages/metrics-device/metrics-device.component';
 
 
 const routes: Routes = [
@@ -27,6 +29,8 @@ const routes: Routes = [
   {path: 'create-activity', component:CreateActivitiesComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'iot-milestone', component: IotMilestoneComponent},
+  { path: 'metrics-device/:id', component: MetricsDeviceComponent },
   {path: '**', redirectTo: 'login', pathMatch: 'full'},
 ];
 
