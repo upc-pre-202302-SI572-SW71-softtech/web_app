@@ -6,258 +6,45 @@ body{
     height: auto;
     line-height: 1.6;
 }
-
-.cards{
-    height: auto;
-    background-color: #ffffff;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2rem;
-    border-radius: 20px;
+.agency-data{
+  @apply flex w-full;
+}
+.header{
+  @apply flex lg:flex-row sm:flex-col gap-1 mb-2;
+}
+.header .agency-profile-photo{
+  @apply lg:w-1/4 sm:w-full
+}
+.header .agency-profile-photo img{
+  @apply lg:w-[250px] sm:w-full h-60 lg:rounded-full sm:rounded-3xl object-cover;
 }
 
-.titulo-list-card{
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 2rem;
+.data{
+  @apply flex flex-col px-3;
 }
-
-.list-card{
-    height: auto;
+.data .agency-name{
+  @apply text-3xl whitespace-nowrap py-0 my-0 items-center;
 }
-
-.card{
-    width: 90%;
-    height: auto;
-    border-radius: 20px;
-    padding: 2rem;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    /* display: grid;
-    grid-template-columns: 80% 20%; */
-    align-items: center;
-    
-    border: 0.15rem solid transparent;
-    /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);  */
+.data .email{
+  @apply text-xl whitespace-nowrap pt-0 mt-0 font-normal;
+}
+.data .description{
+  @apply text-sm pt-3 mt-0 font-normal;
+}
+.data .contact-info{
+  @apply flex flex-col lg:mt-4 sm:mt-0 lg:gap-2 sm:gap-0;
+}
+.contact-info .location{
 
 }
+.contact-info .phone{
 
-.divide{
-    display: grid;
-    grid-template-columns: 75% 25%;
-}
-
-.card:hover{
-    /* background-color: #EDEDED; */
-    /* padding: 1.35rem; */
-    /* border: 0.15rem solid #000000; */
-}
-
-.descripcion{
-    /* text-align: left; */
-    text-align: justify;
-}
-
-.imagen-card{
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 100%;
-    height: 85%;
-    width: 85%;
 }
 
 
 
-.encabezado{
-    display: grid;
-    grid-template-columns: 100% 0%;
-    /* background-color: rebeccapurple; */
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
+
+.list-card-travel{
+  @apply grid lg:grid-cols-4 gap-4 sm:grid-cols-1;
 }
 
-.nombre{
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    justify-content: center;
-    text-transform: capitalize;
-}
-
-
-.estrellas{
-    height: auto;
-    width: 100%;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-}
-
-.estrella{
-    color: #FFD700;
-    font-size: 25px;
-    height: auto;
-    width: auto;
-}
-
-.correo{
-    padding-top: 1rem;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: underline;
-}
-
-
-.descripcion-agency{
-    padding-top: 1rem;
-    font-size: 18px;
-    text-align: justify;
-    /* line-height: 1.6; */
-}
-
-.datos{
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    font-size: 18px;
-    padding-top: 1rem;
-}
-
-.negrita{
-    font-weight: 700;
-    padding-bottom: 0.5rem;
-}
-
-/* boton */
-.boton-viajes{
-    height: auto;
-    text-transform: capitalize;
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    justify-content: center;
-    border-radius: 15px;
-    padding: 1rem;
-    /* background-color: #9CD4E7; */
-}
-
-.boton-viajes:hover{
-    background-color: #ace9fd;
-    cursor: pointer;
-}
-
-
-
-/* Travels */
-.cards-travel {
-    height: auto;
-    background-color: #ffffff;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2rem;
-    border-radius: 20px;
-}
-
-.titulo-list-card-travel {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    justify-content: left;
-    text-align: left;
-    margin-left: auto;
-    width: 100%;
-}
-
-.list-card-travel {
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.card-travel {
-    width: 16rem;
-    height: 26rem;
-    border-radius: 20px;
-    padding: 2rem;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 0.15rem solid transparent;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-
-.card-travel:hover {
-    background-color: #EDEDED;
-    border: 0.15rem solid #000000;
-}
-
-.imagen-card-travel {
-    height: 7rem;
-    width: 7rem;
-    border-radius: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.descripcion-travel {
-    font-size: 18px;
-    font-weight: 600;
-    justify-content: center;
-    text-align: center;
-    margin-top: 5%;
-}
-
-.estrellas-travel {
-    height: auto;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    text-align: center;
-    margin-top: 5%;
-}
-
-.estrella-travel {
-    color: #FFD700;
-    font-size: 25px;
-    height: auto;
-    width: auto;
-}
-
-.precio-travel {
-    margin-top: 5%;
-    font-size: 24px;
-    font-weight: 600;
-    justify-content: center;
-    text-align: center;
-}
-
-.titulo-btnAdd{
-    display: grid;
-    grid-template-columns: 85% 15%;
-    justify-content: right;
-}
-
-.btnNuevoViaje{
-    background-color: #ace9fd;
-    color: #000000;
-    font-size: 14px;
-}
-
-.delete{
-    margin-top: 0.5rem;
-    margin-right: auto;
-    margin-left: auto;
-}

@@ -1,59 +1,34 @@
 <body>
     <div class="cards">
-        <div class="list-card">
-
-            <div class="card">
-                <div class="encabezado">
-                    <div class="nombre">
-                        {{agency.name}}
-                    </div>
-
-                </div>
-                <div class="divide">
-                    <div class="descripcion">
-
-                        <div class="correo">
-                            {{agency.email}}
-                        </div>
-                        <div class="descripcion-agency">
-                            {{agency.description}}
-                            {{agency.description}}
-                            {{agency.description}}
-                            {{agency.description}}
-                            {{agency.description}}
-                            {{agency.description}}
-                        </div>
-                        <div class="datos">
-                            <div class="item">
-                                <div class="negrita">Ubicacion</div>
-                                <p>{{agency.location}}</p>
-                            </div>
-                            <div class="item">
-                                <div class="negrita">RUC</div>
-                                <p>{{agency.ruc}}</p>
-                            </div>
-                            <div class="item">
-                                <div class="negrita">Telefono</div>
-                                <p>{{agency.numberPhone}}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="logo_stars">
-                        <img class="imagen-card" [src]="agency.photoUrl" alt="">
-                        <div class="">
-                            <div class="estrellas">
-                                <mat-icon class="estrella">star</mat-icon>
-                                <mat-icon class="estrella">star</mat-icon>
-                                <mat-icon class="estrella">star</mat-icon>
-                                <mat-icon class="estrella">star</mat-icon>
-                                <mat-icon class="estrella">star</mat-icon>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+        <div class="agency-data">
+          <div class="header">
+            <div class="agency-profile-photo">
+              <img [src]="agency.photoUrl" alt="logo agency">
             </div>
+            <div  class="data">
+              <div class="agency-name">
+               {{agency.name}}
+              </div>
+              <div class="email">
+                {{agency.email}}
+              </div>
+              <div class="description">
+                <!--{{agency.description}}-->
+                En Summit Seekers, nos apasiona llevar la aventura al límite. Somos mucho más que una agencia de viajes; somos tus compañeros de ascenso en la búsqueda de la grandeza en las cumbres más desafiantes del mundo.
+              </div>
+              <div class="ruc">
+                Our Ruc: <b>{{agency.ruc}}</b>
+              </div>
+              <div class="contact-info">
+                <div class="location">
+                  We are located on: <b> {{agency.location}}</b>
+                </div>
+                <div class="phone">
+                  Our phone contact: <b> {{agency.numberPhone}}</b>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
         </div>
@@ -72,23 +47,9 @@
 
                 <div class="card-travel" *ngFor="let travel of agency.travels">
                     <div class="" (click)="seeDetails(travel.id)">
-                        <img class="imagen-card-travel" [src]="travel.photoLogo" alt="">
-                        <div class="descripcion-travel">{{travel.description}}</div>
-                        <div class="estrellas-travel">
-                            <mat-icon class="estrella-travel">star</mat-icon>
-                            <mat-icon class="estrella-travel">star</mat-icon>
-                            <mat-icon class="estrella-travel">star</mat-icon>
-                            <mat-icon class="estrella-travel">star</mat-icon>
-                            <mat-icon class="estrella-travel">star</mat-icon>
-                        </div>
-                        <div class="precio-travel">
-                            $ {{travel.price}}.00
-                        </div>
-                    </div>
 
-                    <div class="delete">
-                        <button mat-raised-button color="warn" style="color: #ffffff; font-size: 14px;"
-                            (click)="deleteTravel(travel.id)">delete</button>
+                          <app-travel-card [travel]="travel" (deleted)="reloadAgency($event)"></app-travel-card>
+
                     </div>
                 </div>
 

@@ -38,7 +38,14 @@ export class ProfileAgencyComponent implements OnInit {
       }
     );
   }
-
+  reloadAgency(bool:boolean){
+  if(bool){
+    this.getAgency();
+  }
+}
+  getStars(){
+    return new Array(this.agency.stars);
+  }
   openCreateTravelDialog(): void {
     const dialogRef = this.dialog.open(CreateTravelComponent, {
       width: 'auto',
