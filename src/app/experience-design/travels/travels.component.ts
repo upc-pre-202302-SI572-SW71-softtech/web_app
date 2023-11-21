@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Travel } from 'src/app/models/travel';
 import { TravelService } from './travel.service';
-import { TestBed } from '@angular/core/testing';
-import { Route, Router } from '@angular/router';
+import {Router } from '@angular/router';
 
 
 
@@ -53,8 +52,8 @@ export class TravelsComponent implements OnInit {
 
   condition(e: number, texto: string) {
     if(e>=47) return true;
-    if(e>texto.length) return true;
-    return false;
+    return e > texto.length;
+
   }
 
   seeDetails(i:any){
