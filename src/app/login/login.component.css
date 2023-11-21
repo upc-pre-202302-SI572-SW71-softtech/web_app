@@ -1,71 +1,3 @@
-/*
-
-.login-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 800px; !* Ajusta el ancho máximo según tus necesidades *!
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f7f7f7;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.login-content {
-  flex: 1;
-  padding: 20px;
-  text-align: right;
-}
-
-.login-content h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.form-group {
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-label {
-  font-weight: bold;
-  display: block;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-button {
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-.login-image {
-  flex: 1;
-}
-
-.login-image img {
-  max-width: 100%;
-  height: auto;
-}*/
 
 .page-container{
   @apply flex flex-row w-full h-full p-16 bg-[url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)] bg-cover bg-center;
@@ -77,14 +9,13 @@ button:hover {
 .right-side-info{
   @apply flex flex-col-reverse w-1/2;
 
-  .right-side-tittle{
-    @apply text-white text-3xl font-semibold text-center mb-5;
-  }
-  .right-side-content{
-    @apply text-white text-sm font-light text-center;
-  }
 }
-
+.right-side-tittle{
+  @apply text-white text-3xl font-semibold text-center mb-5;
+}
+.right-side-content{
+  @apply text-white text-sm font-light text-center;
+}
 
 .register-section{
   @apply flex bg-gray-50 h-full pt-4 w-1/2 rounded-l-3xl drop-shadow;
