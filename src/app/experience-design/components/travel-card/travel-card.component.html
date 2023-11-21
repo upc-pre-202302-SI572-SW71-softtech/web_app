@@ -1,0 +1,26 @@
+<div class="travel-card-container">
+  <div class="travel-image-container">
+    <img src="{{travel.photoLogo}}" alt="travel portrait photo" width="" >
+  </div>
+  <div class="travel-content">
+    <div class="travel-data">
+      <div class="rate">
+        <div class="star" *ngFor="let star of getStarsArray()">
+          <mat-icon class="estrella-travel">star</mat-icon>
+        </div>
+        {{this.travel.stars}}.0
+      </div>
+      <div class="travel-description">
+        <p>{{travel.description}}</p>
+      </div>
+      <div class="travel-price">
+        ${{travel.price}}.00
+      </div>
+    </div>
+    <div class="delete">
+      <button mat-raised-button color="warn" style="color: #ffffff; font-size: 14px;"
+              (click)="deleteTravel()">delete</button>
+    </div>
+  </div>
+
+</div>
