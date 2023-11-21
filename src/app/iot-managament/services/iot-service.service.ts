@@ -8,19 +8,20 @@ import { Device } from '../model/device';
 })
 export class IotServiceService {
 
-  private baseUrl = 'http://localhost:8080/api/';
+  private baseUrl = 'https://backendiot.onrender.com/api/';
+  private endpoint = 'devices';
 
   constructor(private http: HttpClient) { }
 
   getDevices(): Observable<Device[]> {
-    return this.http.get<Device[]>(this.baseUrl + 'devices');
+    return this.http.get<Device[]>(this.baseUrl + this.endpoint);
   }
 
   createDevice(device: Device): Observable<any> {
-    return this.http.post(this.baseUrl + 'devices', device);
+    return this.http.post(this.baseUrl + this.endpoint, device);
   }
 
   deleteDevice(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}devices/${id}`);
+    return this.http.delete(`${this.baseUrl}${this.endpoint}/${id}`);
   }
 }
