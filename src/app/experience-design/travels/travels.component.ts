@@ -13,7 +13,7 @@ import { Route, Router } from '@angular/router';
 })
 export class TravelsComponent implements OnInit {
   travels: Travel[] = []; // Arreglo para almacenar los datos de viaje
-  descriptions: string[] =[]
+  descriptions: (string | undefined)[] =[]
   constructor(private travelService: TravelService, private router: Router) {
   }
 
@@ -37,19 +37,20 @@ export class TravelsComponent implements OnInit {
   reduceCaracter() {
     // Llenar el arreglo descriptions con las descripciones originales
     this.descriptions = this.travels.map(travel => travel.description);
-  
+
     console.log("Descripciones originales: ");
     console.log(this.descriptions);
-  
+
     // Actualizar cada descripción según las condiciones dadas
     this.descriptions = this.descriptions.map(description => {
+      if(description == undefined) return "";
       return description.length > 43 ? description.substring(0, 43) + '...' : description + '...';
     });
-  
+
     console.log("Descripciones actualizadas: ");
     console.log(this.descriptions);
   }
-  
+
   condition(e: number, texto: string) {
     if(e>=47) return true;
     if(e>texto.length) return true;

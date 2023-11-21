@@ -34,8 +34,10 @@ import { HomeComponent } from './xperience-desing/home/home.component';
 import { IotMilestoneComponent } from './iot-managament/iot-milestone/iot-milestone.component';
 import { CreateDeviceDialogComponent } from './iot-managament/components/create-device-dialog/create-device-dialog.component';
 import { MetricsDeviceComponent } from './iot-managament/pages/metrics-device/metrics-device.component';
-// import { CanvasJS } from 'canvasjs'; 
+// import { CanvasJS } from 'canvasjs';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { TravelCardComponent } from './experience-design/components/travel-card/travel-card.component';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -58,23 +60,25 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
     IotMilestoneComponent,
     CreateDeviceDialogComponent,
     MetricsDeviceComponent,
+    TravelCardComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatIconModule,
-        MatButtonModule,
-        MatMenuModule,
-        HttpClientModule,
-        MatInputModule,
-        MatDialogModule,
-        FormsModule,
-        ReactiveFormsModule,
-        MatTableModule,
-        MatPaginatorModule,
-        CanvasJSAngularChartsModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule,
+    HttpClientModule,
+    MatInputModule,
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    CanvasJSAngularChartsModule,
+    NgOptimizedImage
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
