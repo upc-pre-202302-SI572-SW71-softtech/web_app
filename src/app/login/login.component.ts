@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import {  Router } from '@angular/router';
 import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
@@ -19,7 +19,7 @@ export class LoginComponent {
   constructor(private router: Router) { }
 
   onSubmit() {
-    if (this.username === 'admin' && this.password === 'admin') {
+    if (this.loginForm.value.email === 'admin' && this.loginForm.value.password === 'admin') {
       this.router.navigate(['/home']);
     } else {
       alert('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
@@ -27,5 +27,5 @@ export class LoginComponent {
   }
 
 
-  
+
 }
