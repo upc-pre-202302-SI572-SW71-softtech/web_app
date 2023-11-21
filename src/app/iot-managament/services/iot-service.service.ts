@@ -8,7 +8,7 @@ import { Device } from '../model/device';
 })
 export class IotServiceService {
 
-  private baseUrl = 'https://backendiot.onrender.com/api/';
+  private baseUrl = 'https://backendiot.azurewebsites.net/api/';
   private endpoint = 'devices';
 
   constructor(private http: HttpClient) { }

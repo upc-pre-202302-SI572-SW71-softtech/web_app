@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ActivityService {
-  private apiUrl = 'https://backendiot.onrender.com/api/activity';
+  private apiUrl = 'https://backendiot.azurewebsites.net/api/activity';
 
   constructor(private http: HttpClient) {}
 

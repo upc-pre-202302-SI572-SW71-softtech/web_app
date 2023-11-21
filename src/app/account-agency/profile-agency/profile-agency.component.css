@@ -182,8 +182,8 @@ body{
 }
 
 .card-travel {
-    width: 15rem;
-    height: 22rem;
+    width: 16rem;
+    height: 26rem;
     border-radius: 20px;
     padding: 2rem;
     text-align: center;
@@ -210,7 +210,7 @@ body{
 }
 
 .descripcion-travel {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     justify-content: center;
     text-align: center;
@@ -238,7 +238,7 @@ body{
 
 .precio-travel {
     margin-top: 5%;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     justify-content: center;
     text-align: center;

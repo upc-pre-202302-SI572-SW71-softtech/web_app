@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class TravelService {
 
-  private apiUrl = 'https://backendiot.onrender.com/api/travel'; 
+  private apiUrl = 'https://backendiot.azurewebsites.net/api/travel'; 
 
   constructor(private http: HttpClient) {}
 

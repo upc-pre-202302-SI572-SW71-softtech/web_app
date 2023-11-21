@@ -8,7 +8,7 @@ import { Agency } from 'src/app/models/agency';
 })
 export class AgencyService {
   
-  private apiUrl = 'https://backendiot.onrender.com/api/agencies';
+  private apiUrl = 'https://backendiot.azurewebsites.net/api/agencies';
 
   constructor(private http: HttpClient) { }
 

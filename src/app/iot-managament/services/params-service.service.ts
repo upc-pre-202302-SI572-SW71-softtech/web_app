@@ -8,7 +8,7 @@ import { Param } from '../model/param';
 })
 export class ParamsServiceService {
 
-  private baseUrl = 'https://backendiot.onrender.com/api/';
+  private baseUrl = 'https://backendiot.azurewebsites.net/api/';
   private endpoint = 'devices/param'; // Updated endpoint
 
   constructor(private http: HttpClient) { }
