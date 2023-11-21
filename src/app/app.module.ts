@@ -12,6 +12,8 @@ import { PricingCardComponent } from './experience-design/components/pricing-car
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { DevicesIotComponent } from './iot-managament/devices-iot/devices-iot.component';
 import { TravelDescriptionComponent } from './experience-design/travel-description/travel-description.component';
 
@@ -29,6 +31,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RegisterFormComponent } from './auth/components/register-form/register-form.component';
 import { PricingPageComponent } from './experience-design/pages/pricing-page/pricing-page.component';
 import { HomeComponent } from './xperience-desing/home/home.component';
+import { IotMilestoneComponent } from './iot-managament/iot-milestone/iot-milestone.component';
+import { CreateDeviceDialogComponent } from './iot-managament/components/create-device-dialog/create-device-dialog.component';
+import { MetricsDeviceComponent } from './iot-managament/pages/metrics-device/metrics-device.component';
+// import { CanvasJS } from 'canvasjs'; 
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 
 @NgModule({
   declarations: [
@@ -47,7 +54,10 @@ import { HomeComponent } from './xperience-desing/home/home.component';
     PricingPageComponent,
     PricingCardComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    IotMilestoneComponent,
+    CreateDeviceDialogComponent,
+    MetricsDeviceComponent,
   ],
     imports: [
         BrowserModule,
@@ -60,7 +70,10 @@ import { HomeComponent } from './xperience-desing/home/home.component';
         MatInputModule,
         MatDialogModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatTableModule,
+        MatPaginatorModule,
+        CanvasJSAngularChartsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
