@@ -5,7 +5,7 @@ import { AgencyService } from 'src/app/experience-design/agencies/agency.service
 import { CreateTravelComponent } from 'src/app/experience-design/create-travel/create-travel.component';
 import { TravelService } from 'src/app/experience-design/travels/travel.service';
 import { Agency } from 'src/app/models/agency';
-import { Travel } from 'src/app/models/travel';
+
 
 @Component({
   selector: 'app-profile-agency',
@@ -25,7 +25,7 @@ export class ProfileAgencyComponent implements OnInit {
     this.getAgency();
   }
 
-  
+
 
   getAgency() {
     this.agencyService.getByid(1).subscribe(
@@ -38,17 +38,17 @@ export class ProfileAgencyComponent implements OnInit {
       }
     );
   }
-  
+
   openCreateTravelDialog(): void {
     const dialogRef = this.dialog.open(CreateTravelComponent, {
       width: 'auto',
     });
-  
+
     dialogRef.afterClosed().subscribe(result => {
       console.log('El diálogo se cerró');
       this.getAgency();
     });
-    
+
   }
 
   deleteTravel(id: any) {
