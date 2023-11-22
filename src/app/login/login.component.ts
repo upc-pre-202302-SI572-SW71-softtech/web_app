@@ -27,7 +27,7 @@ export class LoginComponent {
     this.authService.login(this.authRequest).subscribe((res) =>
     {
       localStorage.setItem('token', res.token);
-      this.router.navigate(['/home']).then(r => console.log('Login Succesfull'));
+      this.router.navigate(['/list-agencies']).then(r => console.log('Login Succesfull'));
     });
 
 
