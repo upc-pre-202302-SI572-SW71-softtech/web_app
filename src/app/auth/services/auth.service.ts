@@ -21,4 +21,11 @@ export class AuthService extends BaseService<SignInResponse>{
   login(user:AuthRequest){
     return super.create(user);
   }
+
+  isAuthenticated() {
+    return localStorage.getItem('token') != null;
+  }
+  logout(){
+    localStorage.removeItem('token');
+  }
 }

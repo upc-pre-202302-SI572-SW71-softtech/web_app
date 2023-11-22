@@ -14,23 +14,26 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './xperience-desing/home/home.component';
 import { IotMilestoneComponent } from './iot-managament/iot-milestone/iot-milestone.component';
 import { MetricsDeviceComponent } from './iot-managament/pages/metrics-device/metrics-device.component';
+import { UnauthorizedPageComponent } from './shared/unauthorized-page/unauthorized-page.component';
+import {authPathGuard} from "./auth/guard/auth-path.guard";
 
 
 const routes: Routes = [
-  {path: 'list-agencies', component:AgenciesComponent},
-  {path: 'list-travels', component:TravelsComponent},
-  {path: 'list-devices-iot', component:DevicesIotComponent},
-  {path: 'travel-description', component:TravelDescriptionComponent},
-  {path: 'search-travels', component:SearchComponent},
-  {path: 'create-travels', component:CreateTravelComponent},
-  {path: 'profile-agency', component:ProfileAgencyComponent},
+  {path: 'list-agencies', component:AgenciesComponent, canActivate:[authPathGuard]},
+  {path: 'list-travels', component:TravelsComponent,canActivate:[authPathGuard]},
+  {path: 'list-devices-iot', component:DevicesIotComponent,canActivate:[authPathGuard]},
+  {path: 'travel-description', component:TravelDescriptionComponent,canActivate:[authPathGuard]},
+  {path: 'search-travels', component:SearchComponent,canActivate:[authPathGuard]},
+  {path: 'create-travels', component:CreateTravelComponent,canActivate:[authPathGuard]},
+  {path: 'profile-agency', component:ProfileAgencyComponent,canActivate:[authPathGuard]},
   {path: 'register', component:RegisterFormComponent},
-  {path: 'pricing', component:PricingPageComponent},
-  {path: 'create-activity', component:CreateActivitiesComponent},
+  {path: 'pricing', component:PricingPageComponent,canActivate:[authPathGuard]},
+  {path: 'create-activity', component:CreateActivitiesComponent,canActivate:[authPathGuard]},
   {path: 'login', component: LoginComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'iot-milestone', component: IotMilestoneComponent},
-  { path: 'metrics-device/:id', component: MetricsDeviceComponent },
+  {path: 'home', component: HomeComponent,canActivate:[authPathGuard]},
+  {path: 'iot-milestone', component: IotMilestoneComponent,canActivate:[authPathGuard]},
+  { path: 'metrics-device/:id', component: MetricsDeviceComponent,canActivate:[authPathGuard] },
+  {path: 'unauthorized', component: UnauthorizedPageComponent},
   {path: '**', redirectTo: 'login', pathMatch: 'full'},
 ];
 

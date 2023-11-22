@@ -1,36 +1,35 @@
 .page-container{
-  @apply flex flex-row w-full h-full p-16 bg-[url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)] bg-cover bg-center;
+  @apply flex xl:flex-row flex-col w-full h-full p-16 bg-[url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)] bg-cover bg-center;
 }
 .left-side{
-  @apply flex bg-[url('https://images.pexels.com/photos/1450082/pexels-photo-1450082.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center h-full w-1/2 justify-center items-center rounded-l-3xl;
+  @apply flex bg-[url('https://images.pexels.com/photos/1450082/pexels-photo-1450082.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center h-full xl:w-1/2 w-full justify-center items-center xl:rounded-l-3xl xl:rounded-r-none rounded-t-3xl;
 
 }
 .left-side-info{
-  @apply flex flex-col-reverse w-1/2;
+  @apply flex flex-col-reverse xl:w-1/2 w-full;
 
-  .left-side-tittle{
-    @apply text-white text-3xl font-semibold text-center mb-5;
-  }
-  .left-side-content{
-    @apply text-white text-sm font-light text-center;
-  }
 }
-
+.left-side-tittle{
+  @apply text-white text-3xl font-semibold text-center mb-5;
+}
+.left-side-content{
+  @apply text-white text-sm font-light text-center;
+}
 
 .register-section{
-  @apply flex bg-gray-50 h-full pt-4 w-1/2 rounded-r-3xl drop-shadow;
+  @apply flex bg-gray-50 h-full p-4 xl:w-1/2 w-full xl:rounded-r-3xl xl:rounded-l-none rounded-b-3xl drop-shadow;
 }
 .register-section-inside{
-  @apply flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0 w-full h-full;
+  @apply flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0 w-full;
 }
 .brand-header{
-  @apply flex items-center mb-6 text-2xl font-semibold text-gray-900;
+  @apply visible flex items-center mb-6 text-2xl font-semibold text-gray-900;
 }
 .brand-img{
   @apply w-8 h-8 mr-2;
 }
 .register-form-section{
-  @apply w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0;
+  @apply w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-full xl:p-0;
 }
 .form-container{
   @apply p-6 space-y-4 md:space-y-6 sm:p-8;
@@ -40,6 +39,12 @@
 }
 .form{
   @apply space-y-4 md:space-y-6;
+}
+.names{
+  @apply flex flex-row;
+}
+.first-name-field{
+  @apply w-1/2;
 }
 .email-input-label{
   @apply block mb-2 text-sm font-medium text-gray-900;

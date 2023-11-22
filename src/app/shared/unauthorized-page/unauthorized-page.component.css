@@ -1,0 +1,15 @@
+.container-401{
+  @apply bg-[url("../../../assets/401-page/401.error.jpeg")] bg-cover bg-center h-full flex justify-center items-end
+  lg:justify-start lg:items-start lg:p-5
+  ;
+}
+.router{
+  @apply flex text-white text-2xl font-semibold pb-10 lg:p-0 hover:cursor-pointer m-0;
+}
+.icon{
+  color: white;
+  @apply flex font-semibold lg:visible md:visible invisible m-0;
+}
+.go-back-container{
+  @apply flex flex-row items-center;
+}
