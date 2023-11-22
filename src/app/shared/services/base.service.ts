@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, retry, throwError} from "rxjs";
-import {environment} from "../../../environments/environment";
+import {environment as env} from "../../../environments/environment";
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class BaseService<T> {
-  basePath: string = `${environment.serverBasePath}`;
+
+  basePath: string = `${env.serverBasePath}`;
   resourceEndpoint: string = '/resources';
   httpOptions = {
     headers: new HttpHeaders({

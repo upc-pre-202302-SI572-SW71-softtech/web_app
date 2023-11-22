@@ -38,6 +38,8 @@ import { MetricsDeviceComponent } from './iot-managament/pages/metrics-device/me
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { TravelCardComponent } from './experience-design/components/travel-card/travel-card.component';
 import {NgOptimizedImage} from "@angular/common";
+import { ActivityComponent } from './experience-design/components/activity/activity.component';
+import { TipComponent } from './experience-design/components/tip/tip.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,8 @@ import {NgOptimizedImage} from "@angular/common";
     CreateDeviceDialogComponent,
     MetricsDeviceComponent,
     TravelCardComponent,
+    ActivityComponent,
+    TipComponent,
   ],
   imports: [
     BrowserModule,

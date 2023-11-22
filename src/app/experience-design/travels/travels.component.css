@@ -23,9 +23,7 @@ body{
 }
 
 .list-card{
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    @apply grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3
 }
 
 .card{
@@ -39,7 +37,7 @@ body{
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 0.15rem solid transparent;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
