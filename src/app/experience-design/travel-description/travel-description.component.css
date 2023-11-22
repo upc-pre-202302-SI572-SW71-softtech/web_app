@@ -77,5 +77,13 @@ component list styles
 .activity{
   @apply mt-3
 }
+.map-container{
+  @apply flex justify-center items-center;
+}
+.map_ {
+  height: 500px;
+  width: 80%;
+  margin: 2.5rem;
+}
 
 
