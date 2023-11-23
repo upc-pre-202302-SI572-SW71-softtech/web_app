@@ -11,7 +11,6 @@ import {AuthRequest} from "../auth/model/requests/auth-request";
 })
 export class LoginComponent {
   private authRequest = {} as AuthRequest;
-  private logged: boolean = false;
   loginForm = new FormGroup({
     email: new FormControl(''),
     password: new FormControl(''),
