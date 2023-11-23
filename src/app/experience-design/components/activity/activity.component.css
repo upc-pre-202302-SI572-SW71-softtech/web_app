@@ -1,0 +1,22 @@
+.activity-container{
+  @apply flex flex-row items-center;
+}
+.icon{
+  @apply flex w-1/5 justify-end;
+}
+.data{
+  @apply flex flex-col w-3/5;
+}
+.title{
+  @apply flex  text-sm font-medium;
+}
+.description{
+  @apply flex text-sm;
+}
+.icon-style{
+  @apply mx-3;
+  color: #338DD6;
+}
+.delete-button{
+  @apply flex w-1/5;
+}

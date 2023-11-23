@@ -35,7 +35,7 @@ export class TravelDescriptionComponent implements OnInit {
     // this.indice = parseInt(aux)
     this.travelService.getById(aux).subscribe(
       (travel) => {
-        
+
         this.travel = travel;
         console.log(this.travel)
         this.iniciarMap();
@@ -45,14 +45,19 @@ export class TravelDescriptionComponent implements OnInit {
       }
     );
   }
+  getRate(){
+    return new Array(this.travel.rate);
+  }
+  getScreenWidth(){
+    return window.innerWidth;
+  }
 
-  
 
   openCreateActivityDialog(): void {
     const dialogRef = this.dialog.open(CreateActivitiesComponent, {
       width: 'auto',
     });
-  
+
     dialogRef.afterClosed().subscribe(result => {
       console.log('El diálogo se cerró');
       this.getTravel();
@@ -62,7 +67,7 @@ export class TravelDescriptionComponent implements OnInit {
     const dialogRef2 = this.dialog2.open(CreateTipComponent, {
       width: 'auto',
     });
-  
+
     dialogRef2.afterClosed().subscribe(result => {
       console.log('El diálogo se cerró');
       this.getTravel();
@@ -115,4 +120,7 @@ iniciarMap() {
   }
 }
 
+  getSecondaryImages() {
+    return [this.travel.photo1,this.travel.photo2,this.travel.photo3,this.travel.photo4];
+  }
 }

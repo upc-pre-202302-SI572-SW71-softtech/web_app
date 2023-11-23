@@ -34,10 +34,13 @@ import { HomeComponent } from './xperience-desing/home/home.component';
 import { IotMilestoneComponent } from './iot-managament/iot-milestone/iot-milestone.component';
 import { CreateDeviceDialogComponent } from './iot-managament/components/create-device-dialog/create-device-dialog.component';
 import { MetricsDeviceComponent } from './iot-managament/pages/metrics-device/metrics-device.component';
-// import { CanvasJS } from 'canvasjs';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { TravelCardComponent } from './experience-design/components/travel-card/travel-card.component';
 import {NgOptimizedImage} from "@angular/common";
+import { ActivityComponent } from './experience-design/components/activity/activity.component';
+import { TipComponent } from './experience-design/components/tip/tip.component';
+import { UnauthorizedPageComponent } from './shared/unauthorized-page/unauthorized-page.component';
+
 
 @NgModule({
   declarations: [
@@ -61,6 +64,9 @@ import {NgOptimizedImage} from "@angular/common";
     CreateDeviceDialogComponent,
     MetricsDeviceComponent,
     TravelCardComponent,
+    ActivityComponent,
+    TipComponent,
+    UnauthorizedPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,7 +83,7 @@ import {NgOptimizedImage} from "@angular/common";
     MatTableModule,
     MatPaginatorModule,
     CanvasJSAngularChartsModule,
-    NgOptimizedImage
+    NgOptimizedImage,
   ],
   providers: [],
   bootstrap: [AppComponent]

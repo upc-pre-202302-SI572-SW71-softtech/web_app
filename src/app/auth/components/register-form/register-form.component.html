@@ -5,16 +5,8 @@
       <h1 class="left-side-tittle">Welcome to Go2Climb</h1>
     </div>
   </div>
-
-  <section class="register-section">
+  <div class="register-section">
     <div class="register-section-inside">
-      <a href="#" class="brand-header">
-        <img
-          class="brand-img"
-          src="../../../../assets/images/brand-go2climb-light.png"
-          alt="logo" />
-        Go2Climb
-      </a>
       <div class="register-form-section">
         <div class="form-container">
           <h1 class="form-title">Create and account</h1>
@@ -23,46 +15,35 @@
             action="#"
             [formGroup]="managerForm"
             (submit)="onSubmit()">
-            <div>
-              <label for="email" class="email-input-label"
-              >First name</label
-              >
-              <input
-                type="text"
-                name="name"
-                id="first-name"
-                class="email-input"
-                placeholder="your name"
-                required="true"
-                formControlName="firstName" />
+            <div class="names">
+              <div class="first-name-field">
+                <label for="first-name" class="email-input-label"
+                >First name</label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  id="first-name"
+                  class="email-input"
+                  placeholder="your name"
+                  required="true"
+                  formControlName="firstName" />
+              </div>
+              <div class="first-name-field">
+                <label for="last-name" class="email-input-label"
+                >Last name</label
+                >
+                <input
+                  type="text"
+                  name="email"
+                  id="last-name"
+                  class="email-input"
+                  placeholder="Moron"
+                  required="true"
+                  formControlName="lastName" />
+              </div>
             </div>
-            <div>
-              <label for="email" class="email-input-label"
-              >Last name</label
-              >
-              <input
-                type="text"
-                name="email"
-                id="last-name"
-                class="email-input"
-                placeholder="Moron"
-                required="true"
-                formControlName="lastName" />
-            </div>
-            <div>
-              <label for="age" class="age-input-label"
-              >Age
-                <span class="text-red-500">*</span></label
-              >
-              <input
-                type="number"
-                name=""
-                id="age"
-                class="email-input"
-                placeholder="30"
-                required="true"
-                formControlName="age" />
-            </div>
+
 
             <div>
               <label for="email" class="email-input-label"
@@ -144,5 +125,5 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>

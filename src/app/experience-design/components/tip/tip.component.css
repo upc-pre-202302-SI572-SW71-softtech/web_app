@@ -1,0 +1,16 @@
+.tip-container{
+  @apply flex flex-row items-center;
+}
+.icon{
+  @apply flex w-1/5 justify-end;
+}
+.description{
+  @apply flex text-sm font-medium w-3/5;
+}
+.delete-button{
+  @apply flex w-1/5;
+}
+.icon-style{
+  @apply col-end-1 mx-3;
+  color: #338DD6;
+}
