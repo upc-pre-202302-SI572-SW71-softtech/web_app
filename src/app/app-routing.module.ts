@@ -26,7 +26,7 @@ const routes: Routes = [
   {path: 'search-travels', component:SearchComponent,canActivate:[authPathGuard]},
   {path: 'create-travels', component:CreateTravelComponent,canActivate:[authPathGuard]},
   {path: 'profile-agency', component:ProfileAgencyComponent,canActivate:[authPathGuard]},
-  {path: 'register', component:RegisterFormComponent},
+  {path: 'register', component:RegisterFormComponent,canActivate:[authPathGuard]},
   {path: 'pricing', component:PricingPageComponent,canActivate:[authPathGuard]},
   {path: 'create-activity', component:CreateActivitiesComponent,canActivate:[authPathGuard]},
   {path: 'login', component: LoginComponent},

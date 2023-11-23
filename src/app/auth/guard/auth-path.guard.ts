@@ -5,10 +5,14 @@ import {AuthService} from "../services/auth.service";
 export const authPathGuard: CanActivateFn = (route, state) => {
   const router= inject(Router);
   const service = inject(AuthService);
-  if(route.url[0].path === 'register')
+  if(service.isAuthenticated() && route.url[0].path === 'register')
   {
     alert("You are already logged in");
-    router.navigate(['/home']);
+    router.navigate(['/list-agencies']);
+    return true;
+  }
+  if(route.url[0].path === 'register')
+  {
     return true;
   }
   if(service.isAuthenticated()) {
