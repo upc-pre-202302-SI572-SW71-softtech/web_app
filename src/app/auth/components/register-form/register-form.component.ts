@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {Manager} from "../../model/manager";
 import {Person} from "../../model/valueobjects/person";
+import {RegisterService} from "../../services/register.service";
+import {RegisterRequest} from "../../model/requests/register-request";
 
 @Component({
   selector: 'app-register-form',
@@ -28,7 +30,9 @@ export class RegisterFormComponent {
     age: 0,
     phone: '',
   };
-  constructor() {
+  roles = ['ROLE_MANAGER'];
+  register = {} as RegisterRequest;
+  constructor(private registerService:RegisterService) {
     this.manager = new Manager(this.person);
   }
 
@@ -44,6 +48,15 @@ export class RegisterFormComponent {
 
     this.manager = new Manager(this.person);
 
-    console.log(this.manager);
+
+    this.register.username= this.managerForm.value.email ?? '';
+    this.register.password= this.managerForm.value.password ?? '';
+    this.register.roles = this.roles;
+    console.log("Register values:");
+    console.log(this.register);
+    this.registerService.register(this.register).subscribe( (res) => {
+      console.log(res);
+    });
+
   }
 }
